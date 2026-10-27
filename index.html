@@ -10,13 +10,13 @@
       theme: {
         extend: {
           colors: {
-            brandBg: '#f9f6f0',       /* Beige Ivoire très clair */
+            brandBg: '#f6efe8',       
             brandCard: '#ffffff',
             brandCardMuted: '#f4f0ea',
-            brandPrimary: '#2a1f1a',  /* Marron Espresso profond */
+            brandPrimary: '#2a1f1a',  
             brandPrimaryHover: '#1c1411',
-            brandAccent: '#c19a6b',   /* Camel / Doré élégant */
-            brandAccentHover: '#a88157',
+            brandAccent: '#a88157',   
+            brandAccentHover: '#8c6b48',
             brandDark: '#1a1311',
             brandBorder: '#e6dcd3'
           }
@@ -25,15 +25,15 @@
     }
   </script>
   <style>
-    /* Motif organique subtil (style léopard abstrait très léger) */
+    /* Motif fond inspiré du motif léopard classique[cite: 2], rendu discret */
     body {
-      background-color: #f9f6f0;
-      background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 25c-3-5-10-5-10 0 0 8 15 15 15 25 0-15 15-20 15-25 0-6-8-6-10-1-2 4-8 4-10 1zm45 45c-3-5-10-5-10 0 0 8 15 15 15 25 0-15 15-20 15-25 0-6-8-6-10-1-2 4-8 4-10 1zm-30 30c-2-3-7-3-7 0 0 5 10 10 10 15 0-10 10-14 10-15 0-4-5-4-7-1-1 3-5 3-7 1zm60-60c-2-3-7-3-7 0 0 5 10 10 10 15 0-10 10-14 10-15 0-4-5-4-7-1-1 3-5 3-7 1z' fill='%232a1f1a' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-color: #f6efe8;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg opacity='0.08'%3E%3Cpath fill='%232a1f1a' d='M15 15c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM85 35c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM50 85c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z'/%3E%3Cpath fill='%239e6a4b' d='M17 20c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM87 40c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM52 90c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z'/%3E%3Cpath fill='%232a1f1a' d='M40 25c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0zM100 80c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0zM20 70c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0z'/%3E%3C/g%3E%3C/svg%3E");
     }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #c19a6b; border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: #a88157; }
+    ::-webkit-scrollbar-thumb { background: #a88157; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #8c6b48; }
     @media print {
       body { background: white !important; color: black !important; }
       header, .nav-tab, button, #sec-dashboard { display: none !important; }
@@ -47,7 +47,6 @@
 </head>
 <body class="h-full flex flex-col font-sans antialiased overflow-hidden" id="body-container">
 
-  <!-- ÉCRAN DE CONNEXION -->
   <div id="login-screen" class="fixed inset-0 z-[100] bg-[#f9f6f0]/95 backdrop-blur-md flex flex-col items-center justify-center p-6 transition-opacity duration-500">
     <div class="bg-white p-10 rounded-2xl shadow-xl max-w-sm w-full text-center border border-brandBorder">
       <span class="text-4xl mb-4 block text-brandAccent">🍽️</span>
@@ -72,7 +71,7 @@
         </div>
         <div>
           <h1 class="text-xl font-bold tracking-wide text-brandPrimary uppercase">Carnet <span class="text-brandAccent font-light">Équilibre</span></h1>
-          <p class="text-xs text-stone-500 font-light mt-0.5">Recettes saines & Batch Cooking</p>
+          <p class="text-xs text-stone-500 font-light mt-0.5">Recettes saines (Calculées pour 1 personne)</p>
         </div>
       </div>
       <div class="flex items-center gap-2">
@@ -96,12 +95,11 @@
   </header>
 
   <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
-    <!-- SECTION RECIPES -->
     <section id="sec-recipes" class="space-y-6">
       <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
           <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Bibliothèque de Recettes</h2>
-          <p class="text-sm text-stone-500 font-light mt-1">Conçues pour vos équipements (Air Fryer, Four, Plaques). Base de 4 portions.</p>
+          <p class="text-sm text-stone-500 font-light mt-1">Conçues pour vos équipements (Air Fryer, Four, Plaques). Base 1 personne.</p>
         </div>
         <div class="flex items-center gap-3">
           <button onclick="openRecipeForm()" class="inline-flex items-center gap-2 bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium px-4 py-2.5 rounded-lg text-sm transition shadow-sm">
@@ -153,7 +151,6 @@
       <div id="recipeGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
-    <!-- SECTION PLANNING -->
     <section id="sec-planning" class="hidden space-y-6 print-title">
       <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm">
         <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Menu de la Semaine</h2>
@@ -165,7 +162,7 @@
           <p id="planCountBig" class="text-4xl font-bold text-brandPrimary mt-2">0</p>
         </div>
         <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col items-center justify-center">
-          <p class="text-xs font-medium uppercase tracking-widest text-stone-400">Portions</p>
+          <p class="text-xs font-medium uppercase tracking-widest text-stone-400">Portions (1 pers)</p>
           <p id="planPortionsBig" class="text-4xl font-bold text-brandAccent mt-2">0</p>
         </div>
         <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col justify-center gap-3">
@@ -179,7 +176,6 @@
       </div>
     </section>
 
-    <!-- SECTION SHOPPING -->
     <section id="sec-shopping" class="hidden space-y-6 print-title">
       <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
@@ -211,7 +207,6 @@
       <div id="shoppingAislesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
-    <!-- SECTION DASHBOARD -->
     <section id="sec-dashboard" class="hidden space-y-6">
       <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm">
         <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Astuces Santé & Équilibre ✨</h2>
@@ -243,7 +238,6 @@
     </section>
   </main>
 
-  <!-- MODAL DETAILS RECETTE -->
   <div id="recipeModal" class="fixed inset-0 bg-brandDark/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity">
     <div class="bg-white w-full max-w-2xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-brandBorder">
       <div class="p-6 bg-white border-b border-stone-100 flex items-start justify-between gap-4 shrink-0">
@@ -263,7 +257,7 @@
         </div>
         
         <div>
-          <h4 class="font-bold text-brandPrimary text-base mb-3 flex items-center gap-2"><span class="text-brandAccent">🛒</span> Ingrédients (4 portions)</h4>
+          <h4 class="font-bold text-brandPrimary text-base mb-3 flex items-center gap-2"><span class="text-brandAccent">🛒</span> Ingrédients (1 personne)</h4>
           <ul id="modalIngredientsList" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-600"></ul>
         </div>
         
@@ -287,7 +281,6 @@
     </div>
   </div>
 
-  <!-- MODAL AJOUT/MODIFICATION RECETTE -->
   <div id="addRecipeModal" class="fixed inset-0 bg-brandDark/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity">
     <div class="bg-white w-full max-w-xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-brandBorder">
       <div class="p-6 bg-white border-b border-stone-100 flex items-center justify-between shrink-0">
@@ -357,13 +350,11 @@
     </div>
   </div>
 
-  <!-- INCLUSION DE FIREBASE -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
     import { getFirestore, doc, setDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-    // VOS CLÉS FIREBASE INTÉGRÉES
     const firebaseConfig = {
       apiKey: "AIzaSyBeHd4_InbQ6RQZhTsYjhgrhIWm7_zU8yI",
       authDomain: "idoia-557a3.firebaseapp.com",
@@ -377,33 +368,33 @@
     const auth = getAuth(app);
     const db = getFirestore(app);
 
-    // BASE DE DONNÉES 25 RECETTES SUR MESURE
+    // RECETTES BASEES SUR 1 PERSONNE
     const baseRecipesData = [
-      { id: 1, title: "Poulet rôti au pesto & patate douce", prot: "poulet", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Blanc de poulet",qty:"600g",aisle:"Boucherie / Poissonnerie"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"}], steps: ["Couper la patate douce en cubes et les tomates cerises en deux.","Mélanger avec un filet d'huile d'olive, sel, poivre et étaler sur la plaque du four.","Enrober les blancs de poulet de pesto et les poser sur les légumes.","Cuire au four 25 min à 200°C."], gamelleTip: "Le pesto apporte les bons lipides. La patate douce a un IG plus bas que la pomme de terre classique." },
-      { id: 2, title: "Steak haché, écrasé de chou-fleur & haricots", prot: "boeuf", equip: "plaques", prep: "15 min", cook: "15 min", ingredients: [{name:"Steak haché 5%",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"800g",aisle:"Légumes & Fruits"},{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Cottage cheese ou Skyr",qty:"2 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire le chou-fleur et les haricots verts à l'eau bouillante ou vapeur.","Écraser grossièrement le chou-fleur avec le cottage cheese, sel et poivre pour faire une purée.","Cuire les steaks à la poêle selon la cuisson désirée.","Dresser le steak avec l'écrasé et les haricots verts."], gamelleTip: "La purée de chou-fleur est très rassasiante et remplace parfaitement la pomme de terre pour un repas léger en glucides le soir." },
-      { id: 3, title: "Saumon grillé au Air Fryer, riz & courgettes", prot: "poisson", equip: "airfryer", prep: "5 min", cook: "12 min", ingredients: [{name:"Saumon (pavés)",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Courgettes",qty:"3",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Huile d'olive & Herbes",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire le riz à part.","Couper les courgettes en rondelles.","Placer les courgettes et le saumon dans le Air Fryer. Ajouter un tout petit filet d'huile et des herbes sur les courgettes.","Cuire 12 min à 190°C."], gamelleTip: "Le saumon est riche en bonnes graisses (Oméga 3). L'Air Fryer évite de rajouter du gras." },
-      { id: 4, title: "Wrap Dinde, Avocat & Cottage Cheese", prot: "poulet", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas",qty:"4",aisle:"Épicerie & Féculents"},{name:"Blanc de dinde",qty:"8 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Cottage cheese",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Mâche",qty:"1 poignée",aisle:"Légumes & Fruits"}], steps: ["Tartiner généreusement les wraps de cottage cheese.","Disposer les tranches de dinde, l'avocat en lamelles et la salade.","Rouler le wrap fermement et le couper en deux."], gamelleTip: "Idéal pour un déjeuner rapide. L'avocat (bons lipides) et le cottage cheese rendent le wrap moelleux." },
-      { id: 5, title: "Gnocchis poêlés, épinards & tomates", prot: "vege", equip: "plaques", prep: "5 min", cook: "10 min", ingredients: [{name:"Gnocchis",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"},{name:"St Môret ou Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Faire dorer les gnocchis dans une poêle anti-adhésive.","Ajouter les tomates cerises coupées en deux et laisser fondre 3 min.","Ajouter les épinards frais, remuer jusqu'à ce qu'ils réduisent.","Ajouter le fromage hors du feu pour créer un liant crémeux."], gamelleTip: "Les épinards sont excellents pour le fer. Le fromage frais lie le tout sans avoir besoin de crème." },
-      { id: 6, title: "Salade de lentilles, thon, concombre & feta", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Lentilles (en boîte, égouttées)",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Concombre & Tomates",qty:"1 concombre, 2 tomates",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Rincer abondamment les lentilles à l'eau froide.","Couper le concombre, les tomates et la feta en petits dés.","Mélanger tous les ingrédients avec le thon émietté.","Assaisonner avec un filet d'huile d'olive et du jus de citron."], gamelleTip: "Un classique indémodable : très riche en protéines et en fibres végétales." },
-      { id: 7, title: "Crevettes sautées aux poivrons & semoule", prot: "poisson", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Crevettes décortiquées",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Poivrons",qty:"400g",aisle:"Légumes & Fruits"},{name:"Semoule complète",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Oignons blancs",qty:"2",aisle:"Légumes & Fruits"}], steps: ["Préparer la semoule en versant de l'eau bouillante dessus, couvrir 5 min.","Faire revenir l'oignon émincé et les poivrons en lamelles à la poêle.","Ajouter les crevettes et sauter 3 min jusqu'à ce qu'elles soient roses.","Servir les crevettes et légumes sur le lit de semoule."], gamelleTip: "Les crevettes sont quasiment de la protéine pure (très peu de graisses)." },
-      { id: 8, title: "Omelette champignons, épinards & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Champignons frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Épinards frais",qty:"200g",aisle:"Légumes & Fruits"},{name:"Pain complet",qty:"4 belles tranches",aisle:"Épicerie & Féculents"}], steps: ["Faire revenir les champignons émincés dans une poêle jusqu'à évaporation de leur eau.","Ajouter les épinards et laisser réduire 1 min.","Battre les œufs, saler, poivrer, et verser dans la poêle. Cuire à feu moyen.","Manger avec le pain toasté."], gamelleTip: "Les œufs entiers contiennent d'excellents lipides et vitamines." },
-      { id: 9, title: "Aubergines rôties au bœuf & coulis tomate", prot: "boeuf", equip: "four", prep: "15 min", cook: "40 min", ingredients: [{name:"Aubergines",qty:"2 grosses",aisle:"Légumes & Fruits"},{name:"Bœuf haché 5%",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Coulis de tomate",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Riz",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en deux, quadriller la chair et précuire 20 min au four à 200°C.","Creuser la chair avec une cuillère, la hacher et la mélanger avec le bœuf cru et le coulis.","Farcir les coques d'aubergine, remettre au four 20 min.","Servir avec un peu de riz."], gamelleTip: "Précuire l'aubergine au four évite qu'elle n'agisse comme une éponge à huile." },
-      { id: 10, title: "Galette sarrasin, jambon, œuf & champignons", prot: "porc", equip: "plaques", prep: "5 min", cook: "5 min", ingredients: [{name:"Galettes de sarrasin",qty:"4",aisle:"Épicerie & Féculents"},{name:"Jambon blanc",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Œufs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Champignons",qty:"200g",aisle:"Légumes & Fruits"}], steps: ["Poêler rapidement les champignons.","Chauffer la galette dans une grande poêle.","Casser un œuf au centre, étaler légèrement le blanc.","Ajouter une tranche de jambon et les champignons.","Replier les bords et laisser cuire jusqu'à ce que le blanc soit pris."], gamelleTip: "La farine de sarrasin est excellente pour la santé (IG bas et sans gluten)." },
-      { id: 11, title: "Bowl Riz, Sardines, Avocat & Algues", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Sardines en boîte",qty:"2 boîtes",aisle:"Boucherie / Poissonnerie"},{name:"Riz cuit (froid)",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Avocat & Concombre",qty:"1 avocat, 1/2 concombre",aisle:"Légumes & Fruits"},{name:"Feuilles d'algues (Nori)",qty:"1 poignée",aisle:"Épicerie & Féculents"}], steps: ["Couper l'avocat et le concombre en dés.","Égoutter légèrement les sardines.","Dans une assiette creuse, disposer le riz, ajouter les sardines, l'avocat et le concombre.","Émietter les feuilles d'algues sur le dessus avec un filet de sauce soja."], gamelleTip: "Les sardines sont une mine d'Oméga 3 et de calcium. Repas ultra nourrissant." },
-      { id: 12, title: "Pois chiches rôtis, carottes & Skyr (Air Fryer)", prot: "vege", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Pois chiches",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Carottes",qty:"6",aisle:"Légumes & Fruits"},{name:"Skyr nature",qty:"200g",aisle:"Produits Frais & Crémerie"},{name:"Paprika",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Rincer et sécher les pois chiches. Éplucher et couper les carottes en bâtonnets.","Mélanger avec 1 c.a.s d'huile d'olive et le paprika.","Cuire au Air Fryer 20 min à 190°C en secouant à mi-cuisson.","Servir avec le Skyr assaisonné (sel, poivre, herbes) en guise de sauce fraîche."], gamelleTip: "Des protéines végétales croquantes. Le Skyr fait une super sauce dip très dense en protéines." },
-      { id: 13, title: "Pâtes au saumon & brocolis, sauce Skyr", prot: "poisson", equip: "plaques", prep: "10 min", cook: "15 min", ingredients: [{name:"Saumon",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Pâtes (complètes)",qty:"250g",aisle:"Épicerie & Féculents"},{name:"Brocolis",qty:"400g",aisle:"Légumes & Fruits"},{name:"Skyr",qty:"3 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire les pâtes et les fleurettes de brocolis dans la même casserole d'eau bouillante.","Égoutter. Si saumon frais : le cuire à la poêle. Si fumé : le couper en lamelles.","Mélanger les pâtes, les brocolis, le saumon et le Skyr hors du feu."], gamelleTip: "Le Skyr remplace la crème fraîche et rend le plat crémeux tout en ajoutant des protéines." },
-      { id: 14, title: "Poulet, aubergines au four & semoule", prot: "poulet", equip: "four", prep: "10 min", cook: "30 min", ingredients: [{name:"Blanc de poulet",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Aubergines",qty:"2",aisle:"Légumes & Fruits"},{name:"Semoule",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en cubes et le poulet en gros morceaux.","Placer sur une plaque de four, ajouter les herbes et un filet d'huile d'olive.","Cuire 30 min à 200°C.","Préparer la semoule à l'eau bouillante et mélanger le tout (le jus des aubergines va l'hydrater)."], gamelleTip: "L'aubergine fond au four et lie parfaitement la semoule sans rajouter de sauce." },
-      { id: 15, title: "Salade de pâtes, poulet, tomates & pesto", prot: "poulet", equip: "froid", prep: "10 min", cook: "10 min", ingredients: [{name:"Pâtes",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Blanc de poulet cuit",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Tomates & Mâche",qty:"3 tomates, 1 poignée mâche",aisle:"Légumes & Fruits"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire les pâtes et les refroidir sous l'eau froide.","Couper les tomates en dés et le poulet en lamelles.","Dans un grand saladier, mélanger les pâtes froides, le pesto, le poulet, les tomates et la mâche."], gamelleTip: "Le pesto est dense en calories (huile/pignons), 2 cuillères à soupe suffisent largement pour 4 portions." },
-      { id: 16, title: "Steak haché & frites de patate douce (Air Fryer)", prot: "boeuf", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Steak haché 5%",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Mâche ou Salade",qty:"1 sachet",aisle:"Légumes & Fruits"},{name:"Paprika",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Éplucher et couper la patate douce en forme de frites.","Mélanger avec très peu d'huile et le paprika. Cuire au Air Fryer 20 min à 200°C.","Cuire les steaks à la poêle à sec (ou au Air Fryer les 5 dernières minutes).","Servir avec une belle portion de salade verte."], gamelleTip: "Les frites de patate douce au Airfryer sont le cheat-meal sain par excellence." },
-      { id: 17, title: "Dinde sautée, légumes & riz", prot: "poulet", equip: "plaques", prep: "5 min", cook: "15 min", ingredients: [{name:"Blanc de dinde",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Mélange légumes",qty:"600g",aisle:"Légumes & Fruits"},{name:"Riz",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Sauce soja",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Mettre le riz à cuire.","Saisir la dinde en lanières à la poêle.","Ajouter les légumes directement dans la poêle, couvrir 10 min.","Déglacer avec la sauce soja et mélanger au riz."], gamelleTip: "Les légumes bruts (sans sauce) apportent du volume, des fibres et des vitamines au repas." },
-      { id: 18, title: "Salade composée : Haricots, patates, œufs", prot: "vege", equip: "froid", prep: "15 min", cook: "15 min", ingredients: [{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Pommes de terre",qty:"400g",aisle:"Légumes & Fruits"},{name:"Œufs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"}], steps: ["Cuire les pommes de terre, les haricots verts et les œufs durs.","Laisser refroidir et couper en morceaux.","Mélanger avec les tomates en dés.","Assaisonner avec un filet d'huile d'olive et vinaigre balsamique."], gamelleTip: "Les patates froides développent de l'amidon résistant (excellent pour le microbiote et la digestion)." },
-      { id: 19, title: "Crevettes, chou-fleur rôti & avocat", prot: "poisson", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Crevettes décortiquées",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"1 tête",aisle:"Légumes & Fruits"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper le chou-fleur en fleurettes, l'étaler sur une plaque et rôtir 25 min à 200°C au four.","Cuire le riz. Faire revenir les crevettes 3 min à la poêle.","Dans l'assiette, déposer le riz, le chou-fleur rôti, les crevettes et des lamelles d'avocat."], gamelleTip: "Rôtir le chou-fleur lui donne un goût toasté qui change complètement de la vapeur." },
-      { id: 20, title: "Bagel complet, saumon fumé & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Bagels complets",qty:"4",aisle:"Épicerie & Féculents"},{name:"Saumon fumé",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"St Môret",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Concombre & Mâche",qty:"1/2 concombre",aisle:"Légumes & Fruits"}], steps: ["Ouvrir les bagels en deux (les toaster légèrement si possible).","Tartiner de St Môret.","Disposer des rondelles de concombre, la mâche et le saumon fumé."], gamelleTip: "Un classique rapide avec de bons glucides grâce au pain complet." },
-      { id: 21, title: "Bowl Galettes de riz, thon & avocat", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Galettes de riz",qty:"8",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Tomates & Salade",qty:"2 tomates, salade",aisle:"Légumes & Fruits"}], steps: ["Dans un grand bol, émietter grossièrement les galettes de riz.","Écraser l'avocat et le mélanger intimement avec le thon (cela remplace la mayonnaise).","Ajouter les tomates en dés et la salade. Mélanger le tout."], gamelleTip: "C'est une astuce fitness très connue : l'avocat écrasé avec le thon crée une texture onctueuse très saine." },
-      { id: 22, title: "Salade de pois chiches, poivrons & feta", prot: "vege", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Pois chiches",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Poivrons frais",qty:"2",aisle:"Légumes & Fruits"},{name:"Tomates",qty:"3",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Couper les poivrons et les tomates en petits dés.","Mélanger avec les pois chiches rincés.","Émietter la feta sur le dessus.","Assaisonner d'huile d'olive, citron, sel, poivre."], gamelleTip: "Les pois chiches apportent protéines et glucides complexes. Très rassasiant." },
-      { id: 23, title: "Gnocchis au four, tomates cerises & poulet", prot: "poulet", equip: "four", prep: "5 min", cook: "20 min", ingredients: [{name:"Gnocchis",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Tomates cerises",qty:"500g",aisle:"Légumes & Fruits"},{name:"Blanc de poulet",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Dans un grand plat allant au four, mélanger les gnocchis crus, les tomates cerises et le poulet cru en dés.","Arroser d'un filet d'huile d'olive et d'herbes. Bien mélanger.","Cuire 20 à 25 min à 200°C. Les tomates vont éclater et faire une sauce."], gamelleTip: "Les gnocchis cuits au four deviennent croustillants sans nécessiter beaucoup d'huile." },
-      { id: 24, title: "Omelette tomate, chèvre & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"},{name:"Chèvre (bûche)",qty:"80g",aisle:"Produits Frais & Crémerie"},{name:"Pain complet",qty:"4 tranches",aisle:"Épicerie & Féculents"}], steps: ["Couper les tomates en dés et les faire revenir 2 min à la poêle.","Verser les œufs battus par-dessus.","Ajouter des morceaux de chèvre avant que l'omelette ne fige.","Servir chaud avec le pain toasté."], gamelleTip: "Le chèvre a un goût fort, il en faut très peu pour parfumer toute l'omelette." },
-      { id: 25, title: "Wrap au thon, épinards & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas",qty:"4",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"1 poignée",aisle:"Légumes & Fruits"},{name:"St Môret",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Mélanger le thon égoutté avec le St Môret pour créer des rillettes allégées.","Étaler généreusement sur les wraps.","Ajouter les pousses d'épinards frais, rouler fermement et couper."], gamelleTip: "Les rillettes de thon au fromage frais remplacent parfaitement les mayonnaises industrielles !" }
+      { id: 1, title: "Poulet rôti au pesto & patate douce", prot: "poulet", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Blanc de poulet",qty:"150g",aisle:"Boucherie / Poissonnerie"},{name:"Pesto vert",qty:"1/2 c.à.s",aisle:"Épicerie & Féculents"},{name:"Patate douce",qty:"200g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"60g",aisle:"Légumes & Fruits"}], steps: ["Couper la patate douce en cubes et les tomates cerises en deux.","Mélanger avec un filet d'huile d'olive, sel, poivre et étaler sur la plaque du four.","Enrober le blanc de poulet de pesto et le poser sur les légumes.","Cuire au four 25 min à 200°C."], gamelleTip: "Le pesto apporte les bons lipides. La patate douce a un IG plus bas que la pomme de terre classique." },
+      { id: 2, title: "Steak haché, écrasé de chou-fleur & haricots", prot: "boeuf", equip: "plaques", prep: "15 min", cook: "15 min", ingredients: [{name:"Steak haché 5%",qty:"1",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"200g",aisle:"Légumes & Fruits"},{name:"Haricots verts",qty:"100g",aisle:"Légumes & Fruits"},{name:"Cottage cheese ou Skyr",qty:"1/2 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire le chou-fleur et les haricots verts à l'eau bouillante ou vapeur.","Écraser grossièrement le chou-fleur avec le cottage cheese, sel et poivre pour faire une purée.","Cuire le steak à la poêle selon la cuisson désirée.","Dresser le steak avec l'écrasé et les haricots verts."], gamelleTip: "La purée de chou-fleur est très rassasiante et remplace parfaitement la pomme de terre pour un repas léger en glucides le soir." },
+      { id: 3, title: "Saumon grillé au Air Fryer, riz & courgettes", prot: "poisson", equip: "airfryer", prep: "5 min", cook: "12 min", ingredients: [{name:"Saumon (pavé)",qty:"1",aisle:"Boucherie / Poissonnerie"},{name:"Courgette",qty:"1",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"60g",aisle:"Épicerie & Féculents"},{name:"Huile d'olive & Herbes",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Cuire le riz à part.","Couper la courgette en rondelles.","Placer la courgette et le saumon dans le Air Fryer. Ajouter un tout petit filet d'huile et des herbes sur la courgette.","Cuire 12 min à 190°C."], gamelleTip: "Le saumon est riche en bonnes graisses (Oméga 3). L'Air Fryer évite de rajouter du gras." },
+      { id: 4, title: "Wrap Dinde, Avocat & Cottage Cheese", prot: "poulet", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Wrap complet",qty:"1",aisle:"Épicerie & Féculents"},{name:"Blanc de dinde",qty:"2 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Avocat",qty:"1/4",aisle:"Légumes & Fruits"},{name:"Cottage cheese",qty:"1 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Mâche",qty:"1 poignée",aisle:"Légumes & Fruits"}], steps: ["Tartiner généreusement le wrap de cottage cheese.","Disposer les tranches de dinde, l'avocat en lamelles et la salade.","Rouler le wrap fermement et le couper en deux."], gamelleTip: "Idéal pour un déjeuner rapide. L'avocat (bons lipides) et le cottage cheese rendent le wrap moelleux." },
+      { id: 5, title: "Gnocchis poêlés, épinards & tomates", prot: "vege", equip: "plaques", prep: "5 min", cook: "10 min", ingredients: [{name:"Gnocchis",qty:"125g",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"75g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"60g",aisle:"Légumes & Fruits"},{name:"St Môret ou Feta",qty:"25g",aisle:"Produits Frais & Crémerie"}], steps: ["Faire dorer les gnocchis dans une poêle anti-adhésive.","Ajouter les tomates cerises coupées en deux et laisser fondre 3 min.","Ajouter les épinards frais, remuer jusqu'à ce qu'ils réduisent.","Ajouter le fromage hors du feu pour créer un liant crémeux."], gamelleTip: "Les épinards sont excellents pour le fer. Le fromage frais lie le tout sans avoir besoin de crème." },
+      { id: 6, title: "Salade de lentilles, thon, concombre & feta", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Lentilles",qty:"125g",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"1/2 boîte",aisle:"Épicerie & Féculents"},{name:"Concombre & Tomate",qty:"1/4 concombre, 1/2 tomate",aisle:"Légumes & Fruits"},{name:"Feta",qty:"25g",aisle:"Produits Frais & Crémerie"}], steps: ["Rincer abondamment les lentilles à l'eau froide.","Couper le concombre, la tomate et la feta en petits dés.","Mélanger tous les ingrédients avec le thon émietté.","Assaisonner avec un filet d'huile d'olive et du jus de citron."], gamelleTip: "Un classique indémodable : très riche en protéines et en fibres végétales." },
+      { id: 7, title: "Crevettes sautées aux poivrons & semoule", prot: "poisson", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Crevettes décortiquées",qty:"125g",aisle:"Boucherie / Poissonnerie"},{name:"Poivron",qty:"100g",aisle:"Légumes & Fruits"},{name:"Semoule complète",qty:"60g",aisle:"Épicerie & Féculents"},{name:"Oignon",qty:"1/2",aisle:"Légumes & Fruits"}], steps: ["Préparer la semoule en versant de l'eau bouillante dessus, couvrir 5 min.","Faire revenir l'oignon émincé et le poivron en lamelles à la poêle.","Ajouter les crevettes et sauter 3 min jusqu'à ce qu'elles soient roses.","Servir les crevettes et légumes sur le lit de semoule."], gamelleTip: "Les crevettes sont quasiment de la protéine pure (très peu de graisses)." },
+      { id: 8, title: "Omelette champignons, épinards & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"2",aisle:"Produits Frais & Crémerie"},{name:"Champignons frais",qty:"75g",aisle:"Légumes & Fruits"},{name:"Épinards frais",qty:"50g",aisle:"Légumes & Fruits"},{name:"Pain complet",qty:"1 tranche",aisle:"Épicerie & Féculents"}], steps: ["Faire revenir les champignons émincés dans une poêle jusqu'à évaporation de leur eau.","Ajouter les épinards et laisser réduire 1 min.","Battre les œufs, saler, poivrer, et verser dans la poêle. Cuire à feu moyen.","Manger avec le pain toasté."], gamelleTip: "Les œufs entiers contiennent d'excellents lipides et vitamines." },
+      { id: 9, title: "Aubergine rôtie au bœuf & coulis tomate", prot: "boeuf", equip: "four", prep: "15 min", cook: "40 min", ingredients: [{name:"Aubergine",qty:"1/2",aisle:"Légumes & Fruits"},{name:"Bœuf haché 5%",qty:"100g",aisle:"Boucherie / Poissonnerie"},{name:"Coulis de tomate",qty:"50g",aisle:"Épicerie & Féculents"},{name:"Riz",qty:"40g",aisle:"Épicerie & Féculents"}], steps: ["Quadriller la chair de la demi-aubergine et précuire 20 min au four à 200°C.","Creuser la chair avec une cuillère, la hacher et la mélanger avec le bœuf cru et le coulis.","Farcir la coque d'aubergine, remettre au four 20 min.","Servir avec un peu de riz."], gamelleTip: "Précuire l'aubergine au four évite qu'elle n'agisse comme une éponge à huile." },
+      { id: 10, title: "Galette sarrasin, jambon, œuf & champignons", prot: "porc", equip: "plaques", prep: "5 min", cook: "5 min", ingredients: [{name:"Galette de sarrasin",qty:"1",aisle:"Épicerie & Féculents"},{name:"Jambon blanc",qty:"1 tranche",aisle:"Boucherie / Poissonnerie"},{name:"Œuf",qty:"1",aisle:"Produits Frais & Crémerie"},{name:"Champignons",qty:"50g",aisle:"Légumes & Fruits"}], steps: ["Poêler rapidement les champignons.","Chauffer la galette dans une grande poêle.","Casser l'œuf au centre, étaler légèrement le blanc.","Ajouter la tranche de jambon et les champignons.","Replier les bords et laisser cuire jusqu'à ce que le blanc soit pris."], gamelleTip: "La farine de sarrasin est excellente pour la santé (IG bas et sans gluten)." },
+      { id: 11, title: "Bowl Riz, Sardines, Avocat & Algues", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Sardines en boîte",qty:"1 petite boîte",aisle:"Boucherie / Poissonnerie"},{name:"Riz cuit (froid)",qty:"100g",aisle:"Épicerie & Féculents"},{name:"Avocat & Concombre",qty:"1/4 avocat, 1/8 concombre",aisle:"Légumes & Fruits"},{name:"Feuilles d'algues (Nori)",qty:"1 pincée",aisle:"Épicerie & Féculents"}], steps: ["Couper l'avocat et le concombre en dés.","Égoutter légèrement les sardines.","Dans une assiette creuse, disposer le riz, ajouter les sardines, l'avocat et le concombre.","Émietter les feuilles d'algues sur le dessus avec un filet de sauce soja."], gamelleTip: "Les sardines sont une mine d'Oméga 3 et de calcium. Repas ultra nourrissant." },
+      { id: 12, title: "Pois chiches rôtis, carottes & Skyr (Air Fryer)", prot: "vege", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Pois chiches",qty:"100g",aisle:"Épicerie & Féculents"},{name:"Carottes",qty:"2",aisle:"Légumes & Fruits"},{name:"Skyr nature",qty:"50g",aisle:"Produits Frais & Crémerie"},{name:"Paprika",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Rincer et sécher les pois chiches. Éplucher et couper les carottes en bâtonnets.","Mélanger avec un soupçon d'huile d'olive et le paprika.","Cuire au Air Fryer 20 min à 190°C en secouant à mi-cuisson.","Servir avec le Skyr assaisonné (sel, poivre, herbes) en guise de sauce fraîche."], gamelleTip: "Des protéines végétales croquantes. Le Skyr fait une super sauce dip très dense en protéines." },
+      { id: 13, title: "Pâtes au saumon & brocolis, sauce Skyr", prot: "poisson", equip: "plaques", prep: "10 min", cook: "15 min", ingredients: [{name:"Saumon",qty:"100g",aisle:"Boucherie / Poissonnerie"},{name:"Pâtes",qty:"60g",aisle:"Épicerie & Féculents"},{name:"Brocolis",qty:"100g",aisle:"Légumes & Fruits"},{name:"Skyr",qty:"1 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire les pâtes et les fleurettes de brocolis dans la même casserole d'eau bouillante.","Égoutter. Si saumon frais : le cuire à la poêle. Si fumé : le couper en lamelles.","Mélanger les pâtes, les brocolis, le saumon et le Skyr hors du feu."], gamelleTip: "Le Skyr remplace la crème fraîche et rend le plat crémeux tout en ajoutant des protéines." },
+      { id: 14, title: "Poulet, aubergine au four & semoule", prot: "poulet", equip: "four", prep: "10 min", cook: "30 min", ingredients: [{name:"Blanc de poulet",qty:"125g",aisle:"Boucherie / Poissonnerie"},{name:"Aubergine",qty:"1/2",aisle:"Légumes & Fruits"},{name:"Semoule",qty:"60g",aisle:"Épicerie & Féculents"},{name:"Herbes de Provence",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Couper l'aubergine en cubes et le poulet en morceaux.","Placer sur une plaque de four, ajouter les herbes et un filet d'huile d'olive.","Cuire 30 min à 200°C.","Préparer la semoule à l'eau bouillante et mélanger le tout."], gamelleTip: "L'aubergine fond au four et lie parfaitement la semoule sans rajouter de sauce." },
+      { id: 15, title: "Salade de pâtes, poulet, tomates & pesto", prot: "poulet", equip: "froid", prep: "10 min", cook: "10 min", ingredients: [{name:"Pâtes",qty:"50g",aisle:"Épicerie & Féculents"},{name:"Blanc de poulet cuit",qty:"75g",aisle:"Boucherie / Poissonnerie"},{name:"Tomate",qty:"1",aisle:"Légumes & Fruits"},{name:"Pesto vert",qty:"1/2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire les pâtes et les refroidir sous l'eau froide.","Couper la tomate en dés et le poulet en lamelles.","Mélanger les pâtes froides, le pesto, le poulet et la tomate."], gamelleTip: "Le pesto est dense en calories (huile/pignons), une demi-cuillère suffit pour parfumer." },
+      { id: 16, title: "Steak haché & frites de patate douce", prot: "boeuf", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Steak haché 5%",qty:"1",aisle:"Boucherie / Poissonnerie"},{name:"Patate douce",qty:"200g",aisle:"Légumes & Fruits"},{name:"Mâche ou Salade",qty:"1 poignée",aisle:"Légumes & Fruits"},{name:"Paprika",qty:"1 pincée",aisle:"Épicerie & Féculents"}], steps: ["Éplucher et couper la patate douce en forme de frites.","Mélanger avec très peu d'huile et le paprika. Cuire au Air Fryer 20 min à 200°C.","Cuire le steak à la poêle à sec (ou au Air Fryer les 5 dernières minutes).","Servir avec une belle portion de salade verte."], gamelleTip: "Les frites de patate douce au Airfryer sont le cheat-meal sain par excellence." },
+      { id: 17, title: "Dinde sautée, légumes & riz", prot: "poulet", equip: "plaques", prep: "5 min", cook: "15 min", ingredients: [{name:"Blanc de dinde",qty:"125g",aisle:"Boucherie / Poissonnerie"},{name:"Légumes",qty:"150g",aisle:"Légumes & Fruits"},{name:"Riz",qty:"50g",aisle:"Épicerie & Féculents"},{name:"Sauce soja",qty:"1/2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Mettre le riz à cuire.","Saisir la dinde en lanières à la poêle.","Ajouter les légumes directement dans la poêle, couvrir 10 min.","Déglacer avec la sauce soja et mélanger au riz."], gamelleTip: "Les légumes bruts apportent du volume, des fibres et des vitamines au repas." },
+      { id: 18, title: "Salade composée : Haricots, patates, œuf", prot: "vege", equip: "froid", prep: "15 min", cook: "15 min", ingredients: [{name:"Haricots verts",qty:"100g",aisle:"Légumes & Fruits"},{name:"Pommes de terre",qty:"100g",aisle:"Légumes & Fruits"},{name:"Œuf",qty:"1",aisle:"Produits Frais & Crémerie"},{name:"Tomate",qty:"1/2",aisle:"Légumes & Fruits"}], steps: ["Cuire la pomme de terre, les haricots verts et l'œuf.","Laisser refroidir et couper en morceaux.","Mélanger avec la tomate en dés.","Assaisonner avec un filet d'huile d'olive et vinaigre."], gamelleTip: "Les patates froides développent de l'amidon résistant (excellent pour le microbiote et la digestion)." },
+      { id: 19, title: "Crevettes, chou-fleur rôti & avocat", prot: "poisson", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Crevettes décortiquées",qty:"100g",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"1/4 tête",aisle:"Légumes & Fruits"},{name:"Avocat",qty:"1/4",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"40g",aisle:"Épicerie & Féculents"}], steps: ["Couper le chou-fleur en fleurettes, l'étaler sur une plaque et rôtir 25 min à 200°C au four.","Cuire le riz. Faire revenir les crevettes 3 min à la poêle.","Dans l'assiette, déposer le riz, le chou-fleur rôti, les crevettes et l'avocat."], gamelleTip: "Rôtir le chou-fleur lui donne un goût toasté qui change complètement de la vapeur." },
+      { id: 20, title: "Bagel complet, saumon fumé & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Bagel complet",qty:"1",aisle:"Épicerie & Féculents"},{name:"Saumon fumé",qty:"1 tranche",aisle:"Boucherie / Poissonnerie"},{name:"St Môret",qty:"1 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Concombre",qty:"quelques rondelles",aisle:"Légumes & Fruits"}], steps: ["Ouvrir le bagel en deux (le toaster légèrement si possible).","Tartiner de St Môret.","Disposer des rondelles de concombre et le saumon fumé."], gamelleTip: "Un classique rapide avec de bons glucides grâce au pain complet." },
+      { id: 21, title: "Bowl Galettes de riz, thon & avocat", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Galettes de riz",qty:"2",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"1/2 boîte",aisle:"Épicerie & Féculents"},{name:"Avocat",qty:"1/4",aisle:"Légumes & Fruits"},{name:"Tomate",qty:"1/2",aisle:"Légumes & Fruits"}], steps: ["Dans un grand bol, émietter grossièrement les galettes de riz.","Écraser l'avocat et le mélanger intimement avec le thon (cela remplace la mayonnaise).","Ajouter la tomate en dés. Mélanger le tout."], gamelleTip: "C'est une astuce fitness très connue : l'avocat écrasé avec le thon crée une texture onctueuse très saine." },
+      { id: 22, title: "Salade de pois chiches, poivron & feta", prot: "vege", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Pois chiches",qty:"125g",aisle:"Épicerie & Féculents"},{name:"Poivron frais",qty:"1/2",aisle:"Légumes & Fruits"},{name:"Tomate",qty:"1",aisle:"Légumes & Fruits"},{name:"Feta",qty:"25g",aisle:"Produits Frais & Crémerie"}], steps: ["Couper le poivron et la tomate en petits dés.","Mélanger avec les pois chiches rincés.","Émietter la feta sur le dessus.","Assaisonner d'huile d'olive, citron, sel, poivre."], gamelleTip: "Les pois chiches apportent protéines et glucides complexes. Très rassasiant." },
+      { id: 23, title: "Gnocchis au four, tomates cerises & poulet", prot: "poulet", equip: "four", prep: "5 min", cook: "20 min", ingredients: [{name:"Gnocchis",qty:"125g",aisle:"Épicerie & Féculents"},{name:"Tomates cerises",qty:"125g",aisle:"Légumes & Fruits"},{name:"Poulet en dés",qty:"100g",aisle:"Boucherie / Poissonnerie"},{name:"Herbes de Provence",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Dans un plat, mélanger les gnocchis crus, les tomates cerises et le poulet cru en dés.","Arroser d'un filet d'huile d'olive et d'herbes. Bien mélanger.","Cuire 20 à 25 min à 200°C. Les tomates vont éclater et faire une sauce."], gamelleTip: "Les gnocchis cuits au four deviennent croustillants sans nécessiter beaucoup d'huile." },
+      { id: 24, title: "Omelette tomate, chèvre & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"2",aisle:"Produits Frais & Crémerie"},{name:"Tomate",qty:"1/2",aisle:"Légumes & Fruits"},{name:"Chèvre (bûche)",qty:"20g",aisle:"Produits Frais & Crémerie"},{name:"Pain complet",qty:"1 tranche",aisle:"Épicerie & Féculents"}], steps: ["Couper la tomate en dés et la faire revenir 2 min à la poêle.","Verser les œufs battus par-dessus.","Ajouter des morceaux de chèvre avant que l'omelette ne fige.","Servir chaud avec le pain toasté."], gamelleTip: "Le chèvre a un goût fort, il en faut très peu pour parfumer toute l'omelette." },
+      { id: 25, title: "Wrap au thon, épinards & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Wrap",qty:"1",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"1/2 boîte",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"1 poignée",aisle:"Légumes & Fruits"},{name:"St Môret",qty:"1 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Mélanger le thon égoutté avec le St Môret pour créer des rillettes allégées.","Étaler sur le wrap.","Ajouter les pousses d'épinards frais, rouler fermement et couper."], gamelleTip: "Les rillettes de thon au fromage frais remplacent parfaitement les mayonnaises industrielles !" }
     ];
 
     let recipesData = [...baseRecipesData];
@@ -418,7 +409,6 @@
     let currentModalRecipeId = null;
     let editingRecipeId = null;
 
-    // --- FIREBASE SYNC ---
     onAuthStateChanged(auth, (user) => {
       const loginScreen = document.getElementById('login-screen');
       const bodyContainer = document.getElementById('body-container');
@@ -475,14 +465,12 @@
           favoriteRecipeIds = data.favoriteRecipeIds || [];
           
           const customRecs = data.customRecipes || [];
-          
           let merged = [...baseRecipesData];
           customRecs.forEach(c => {
             const idx = merged.findIndex(r => r.id === c.id);
             if(idx > -1) merged[idx] = c; 
             else merged.push(c); 
           });
-          
           recipesData = merged;
           updateAllViews();
         }
@@ -505,7 +493,6 @@
       }
     }
 
-    // --- UI HELPERS ---
     function getEquipBadge(equip) {
       switch(equip) {
         case 'four': return '<span class="bg-[#f4f0ea] text-brandAccent text-[11px] font-bold px-2 py-0.5 rounded-md border border-brandBorder shadow-sm">🔥 Four</span>';
@@ -545,10 +532,10 @@
         const isFav = favoriteRecipeIds.includes(recipe.id);
         
         const card = document.createElement('div');
-        card.className = "bg-white rounded-2xl border-2 border-brandBorder shadow-sm hover:shadow-md hover:border-brandAccent transition p-4 flex flex-col justify-between space-y-4 group relative";
+        card.className = "bg-white rounded-2xl border-2 border-brandBorder shadow-sm hover:shadow-md hover:border-brandAccent transition p-5 flex flex-col justify-between space-y-4 group relative";
         
         card.innerHTML = `
-          <div class="space-y-2.5">
+          <div class="space-y-3">
             <div class="flex items-center justify-between gap-2">
               <div class="flex items-center gap-1.5 flex-wrap">${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}</div>
               <div class="flex items-center gap-2">
@@ -556,12 +543,12 @@
                 <span class="text-xs text-stone-300 font-bold">#${recipe.id}</span>
               </div>
             </div>
-            <h3 onclick="openModal(${recipe.id})" class="font-bold text-base text-brandDark group-hover:text-brandAccent cursor-pointer line-clamp-1">${recipe.title}</h3>
-            <p class="text-xs text-stone-500 line-clamp-2"><strong>Ingrédients:</strong> ${recipe.ingredients.slice(0, 3).map(i => i.name).join(', ')}...</p>
+            <h3 onclick="openModal(${recipe.id})" class="font-bold text-[15px] leading-snug text-brandPrimary group-hover:text-brandAccent cursor-pointer transition">${recipe.title}</h3>
+            <p class="text-xs text-stone-500 line-clamp-2 leading-relaxed"><strong>Ingrédients:</strong> ${recipe.ingredients.slice(0, 3).map(i => i.name).join(', ')}...</p>
           </div>
-          <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
-            <button onclick="openModal(${recipe.id})" class="text-stone-600 font-semibold hover:text-brandAccent">📖 Voir recette</button>
-            <button onclick="toggleSelectRecipe(${recipe.id})" class="${isSelected ? 'bg-brandCardMuted text-brandAccent border border-brandAccent' : 'bg-brandPrimary hover:bg-brandPrimaryHover text-white'} font-bold px-3 py-1.5 rounded-xl transition shadow-sm">${isSelected ? '✔️ Au menu' : '+ Au menu'}</button>
+          <div class="pt-4 border-t border-stone-100 flex items-center justify-between text-xs">
+            <button onclick="openModal(${recipe.id})" class="text-stone-500 font-medium hover:text-brandAccent transition">📖 Voir recette</button>
+            <button onclick="toggleSelectRecipe(${recipe.id})" class="${isSelected ? 'bg-brandCardMuted text-brandAccent border border-brandAccent' : 'bg-brandPrimary hover:bg-brandPrimaryHover text-white'} font-bold px-4 py-2 rounded-lg transition shadow-sm">${isSelected ? '✔️ Au menu' : '+ Au menu'}</button>
           </div>
         `;
         grid.appendChild(card);
@@ -571,8 +558,8 @@
     window.toggleFavFilter = () => {
       showFavoritesOnly = !showFavoritesOnly;
       const btn = document.getElementById('btn-fav-filter');
-      btn.className = showFavoritesOnly ? "active-filter bg-brandAccent text-white px-4 py-2.5 rounded-xl transition text-sm font-semibold flex items-center gap-2 shrink-0 shadow-sm" : "border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2.5 rounded-xl transition text-sm font-semibold flex items-center gap-2 shrink-0";
-      btn.innerHTML = showFavoritesOnly ? "❤️ Voir toutes" : "🤍 Mes Coups de Cœur";
+      btn.className = showFavoritesOnly ? "active-filter bg-brandPrimary text-white px-4 py-2.5 rounded-lg transition text-sm font-medium flex items-center gap-2 shrink-0 shadow-sm" : "border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 hover:text-brandPrimary px-4 py-2.5 rounded-lg transition text-sm font-medium flex items-center gap-2 shrink-0";
+      btn.innerHTML = showFavoritesOnly ? "❤️ Voir toutes" : "🤍 Favoris";
       renderRecipes();
     }
 
@@ -585,7 +572,7 @@
     window.setProteinFilter = (prot) => {
       currentProtFilter = prot;
       document.querySelectorAll('.prot-filter').forEach(btn => {
-        btn.className = (btn.textContent.toLowerCase().includes(prot) || (prot === 'all' && btn.textContent.includes('Toutes')) || (prot === 'vege' && btn.textContent.includes('Végé'))) ? "prot-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "prot-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
+        btn.className = (btn.textContent.toLowerCase().includes(prot) || (prot === 'all' && btn.textContent.includes('Toutes')) || (prot === 'vege' && btn.textContent.includes('Végé'))) ? "prot-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
       });
       renderRecipes();
     }
@@ -598,7 +585,7 @@
                          (equip === 'airfryer' && btn.textContent.includes('Air Fryer')) ||
                          (equip === 'froid' && btn.textContent.includes('Froid')) ||
                          (equip === 'plaques' && btn.textContent.includes('Plaques'));
-        btn.className = isActive ? "equip-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "equip-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
+        btn.className = isActive ? "equip-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "equip-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
       });
       renderRecipes();
     }
@@ -620,7 +607,7 @@
       container.innerHTML = '';
       const count = selectedRecipeIds.length;
       document.getElementById('planCountBig').innerText = count; 
-      document.getElementById('planPortionsBig').innerText = count * 4;
+      document.getElementById('planPortionsBig').innerText = count; 
       document.getElementById('headerMenuCount').innerText = count; 
       document.getElementById('planningTabBadge').innerText = count;
 
@@ -631,7 +618,7 @@
       selectedRecipeIds.forEach((id, index) => {
         const recipe = recipesData.find(r => r.id === id); if (!recipe) return;
         const row = document.createElement('div'); 
-        row.className = "flex flex-col sm:flex-row sm:items-center justify-between bg-[#fdfaf6] p-4 rounded-xl border border-brandBorder gap-4 hover:border-brandAccent transition";
+        row.className = "flex flex-col sm:flex-row sm:items-center justify-between bg-[#f9f6f0] p-4 rounded-xl border border-brandBorder gap-4 hover:border-brandAccent transition";
         row.innerHTML = `<div class="flex items-center space-x-4"><span class="bg-brandPrimary text-white font-bold text-xs w-8 h-8 rounded-lg flex items-center justify-center shadow-sm">J${index + 1}</span><div><div class="flex gap-2 mb-1">${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}</div><h4 class="font-bold text-sm text-brandPrimary cursor-pointer hover:text-brandAccent transition" onclick="openModal(${recipe.id})">${recipe.title}</h4></div></div><div class="flex gap-2"><button onclick="openModal(${recipe.id})" class="bg-white border border-stone-200 text-stone-600 px-3 py-2 rounded-lg text-xs font-medium hover:bg-stone-50 transition shadow-sm">Voir</button><button onclick="toggleSelectRecipe(${recipe.id})" class="bg-white text-stone-500 border border-stone-200 font-medium px-3 py-2 rounded-lg text-xs hover:bg-red-50 hover:text-red-500 hover:border-red-200 transition shadow-sm">Retirer</button></div>`;
         container.appendChild(row);
       });
@@ -650,7 +637,7 @@
         let html = `<h3 class="font-bold text-sm text-brandPrimary border-b border-stone-100 pb-3 mb-3 flex items-center justify-between"><span>${aisleName}</span><span class="text-xs bg-brandCardMuted text-brandAccent font-bold px-2.5 py-1 rounded-md border border-brandBorder">${aisles[aisleName].length} art.</span></h3><ul class="space-y-2.5 text-sm">`;
         aisles[aisleName].forEach(item => {
           totalItems++; const key = `${aisleName}_${item.name}`.replace(/\s+/g, '_'); const isChecked = !!shoppingCheckedState[key]; if(isChecked) totalChecked++;
-          html += `<li class="flex items-start justify-between gap-3 p-2 rounded-lg transition ${isChecked ? 'bg-stone-50 line-through text-stone-400' : 'hover:bg-[#fdfaf6]'}"><label class="flex flex-1 cursor-pointer items-start"><input type="checkbox" onchange="toggleShoppingCheck('${key}')" ${isChecked ? 'checked' : ''} class="mt-1 mr-3 h-4 w-4 rounded text-brandAccent focus:ring-brandAccent"><div class="font-medium leading-tight">${item.name} <span class="text-stone-400 font-normal text-xs block mt-0.5">${item.qty}</span></div></label>${item.isCustom ? `<button onclick="removeCustomItem(${item.customIdx})" class="text-stone-300 hover:text-red-500 transition">✕</button>` : ''}</li>`;
+          html += `<li class="flex items-start justify-between gap-3 p-2 rounded-lg transition ${isChecked ? 'bg-stone-50 line-through text-stone-400' : 'hover:bg-[#f9f6f0]'}"><label class="flex flex-1 cursor-pointer items-start"><input type="checkbox" onchange="toggleShoppingCheck('${key}')" ${isChecked ? 'checked' : ''} class="mt-1 mr-3 h-4 w-4 rounded text-brandAccent focus:ring-brandAccent"><div class="font-medium leading-tight">${item.name} <span class="text-stone-400 font-normal text-xs block mt-0.5">${item.qty}</span></div></label>${item.isCustom ? `<button onclick="removeCustomItem(${item.customIdx})" class="text-stone-300 hover:text-red-500 transition">✕</button>` : ''}</li>`;
         });
         html += `</ul>`; card.innerHTML = html; container.appendChild(card);
       });
@@ -677,7 +664,7 @@
       document.getElementById('modalEquipText').innerText = equipText;
       
       const ingUl = document.getElementById('modalIngredientsList'); ingUl.innerHTML = '';
-      recipe.ingredients.forEach(i => { ingUl.innerHTML += `<li class="bg-[#fdfaf6] p-2.5 rounded-xl border border-brandBorder text-xs shadow-sm flex items-center gap-2"><span class="text-brandAccent opacity-70">▪</span> <span><strong>${i.name}</strong> (${i.qty})</span></li>`; });
+      recipe.ingredients.forEach(i => { ingUl.innerHTML += `<li class="bg-[#f9f6f0] p-2.5 rounded-xl border border-brandBorder text-xs shadow-sm flex items-center gap-2"><span class="text-brandAccent opacity-70">▪</span> <span><strong>${i.name}</strong> (${i.qty})</span></li>`; });
       
       const stepOl = document.getElementById('modalStepsList'); stepOl.innerHTML = '';
       recipe.steps.forEach(s => { stepOl.innerHTML += `<li class="pl-1">${s}</li>`; });
@@ -744,8 +731,8 @@
       row.className = "flex gap-2 items-center bg-white p-2 rounded-lg border border-stone-200 shadow-sm";
       row.innerHTML = `
         <input type="text" placeholder="Nom (ex: Riz)" value="${name}" class="ing-name flex-[2] bg-transparent text-sm focus:outline-none min-w-0">
-        <input type="text" placeholder="Qté (ex: 200g)" value="${qty}" class="ing-qty flex-[1] bg-transparent text-sm focus:outline-none min-w-0 border-l border-stone-200 pl-2">
-        <select class="ing-aisle flex-[2] bg-[#fdfaf6] rounded-md px-2 text-xs py-1.5 outline-none text-stone-600 min-w-0 truncate border-l border-stone-200">
+        <input type="text" placeholder="Qté (ex: 60g)" value="${qty}" class="ing-qty flex-[1] bg-transparent text-sm focus:outline-none min-w-0 border-l border-stone-200 pl-2">
+        <select class="ing-aisle flex-[2] bg-[#f9f6f0] rounded-md px-2 text-xs py-1.5 outline-none text-stone-600 min-w-0 truncate border-l border-stone-200">
           <option value="Boucherie / Poissonnerie" ${aisle.includes('Boucherie') ? 'selected' : ''}>🥩 Bouch/Poiss</option>
           <option value="Légumes & Fruits" ${aisle.includes('Légumes') ? 'selected' : ''}>🥦 Lég/Fruits</option>
           <option value="Épicerie & Féculents" ${aisle.includes('Épicerie') ? 'selected' : ''}>🌾 Épicerie</option>
@@ -809,9 +796,9 @@
     }
 
     window.switchTab = (tabId) => {
-      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('text-brandPrimary','border-brandPrimary','font-bold'));
-      document.querySelectorAll('.nav-tab').forEach(t => t.classList.add('text-stone-400','border-transparent'));
-      const activeTab = document.getElementById(`tab-${tabId}`); activeTab.classList.remove('text-stone-400','border-transparent'); activeTab.classList.add('text-brandPrimary','border-brandPrimary','font-bold');
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('text-brandPrimary','border-b-2','border-brandPrimary'));
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.add('text-stone-400','border-b-2','border-transparent'));
+      const activeTab = document.getElementById(`tab-${tabId}`); activeTab.classList.remove('text-stone-400','border-transparent'); activeTab.classList.add('text-brandPrimary','border-brandPrimary');
       ['recipes','planning','shopping','dashboard'].forEach(id => document.getElementById(`sec-${id}`).classList.add('hidden'));
       document.getElementById(`sec-${tabId}`).classList.remove('hidden');
     }
