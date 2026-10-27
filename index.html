@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html lang="fr" class="h-full text-[#2c1e16]">
+<html lang="fr" class="h-full text-[#2a1f1a]">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Carnet de Recettes 🐆 Édition Léopard</title>
+  <title>Mon Carnet Équilibre</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
           colors: {
-            brandCard: '#FFFFFF',
-            brandCardMuted: '#fcf8f2',
-            brandPrimary: '#5C4033', /* Marron foncé Léopard */
-            brandPrimaryHover: '#3b2820',
-            brandAccent: '#D27D2D', /* Caramel/Orange Léopard */
-            brandAccentHover: '#a66020',
-            brandDark: '#2c1e16',
-            brandBorder: '#e8d5c4'
+            brandBg: '#f9f6f0',       /* Beige Ivoire très clair */
+            brandCard: '#ffffff',
+            brandCardMuted: '#f4f0ea',
+            brandPrimary: '#2a1f1a',  /* Marron Espresso profond */
+            brandPrimaryHover: '#1c1411',
+            brandAccent: '#c19a6b',   /* Camel / Doré élégant */
+            brandAccentHover: '#a88157',
+            brandDark: '#1a1311',
+            brandBorder: '#e6dcd3'
           }
         }
       }
     }
   </script>
   <style>
-    /* Motif Léopard subtil en fond */
+    /* Motif organique subtil (style léopard abstrait très léger) */
     body {
-      background-color: #fdfaf6;
-      background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M24 15c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 9c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3zm18-20c-3.9 0-7 3.1-7 7s3.1 7 7 7 7-3.1 7-7-3.1-7-7-7zm0 11c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4zm-15 15c-2.8 0-5 2.2-5 5s2.2 5 5 5 5-2.2 5-5-2.2-5-5-5zm0 7c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm20 3c-3.3 0-6 2.7-6 6s2.7 6 6 6 6-2.7 6-6-2.7-6-6-6zm0 9c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3-1.3 3-3 3z' fill='%235C4033' fill-opacity='0.08' fill-rule='evenodd'/%3E%3C/svg%3E");
+      background-color: #f9f6f0;
+      background-image: url("data:image/svg+xml,%3Csvg width='120' height='120' viewBox='0 0 120 120' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M15 25c-3-5-10-5-10 0 0 8 15 15 15 25 0-15 15-20 15-25 0-6-8-6-10-1-2 4-8 4-10 1zm45 45c-3-5-10-5-10 0 0 8 15 15 15 25 0-15 15-20 15-25 0-6-8-6-10-1-2 4-8 4-10 1zm-30 30c-2-3-7-3-7 0 0 5 10 10 10 15 0-10 10-14 10-15 0-4-5-4-7-1-1 3-5 3-7 1zm60-60c-2-3-7-3-7 0 0 5 10 10 10 15 0-10 10-14 10-15 0-4-5-4-7-1-1 3-5 3-7 1z' fill='%232a1f1a' fill-opacity='0.02' fill-rule='evenodd'/%3E%3C/svg%3E");
     }
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
-    ::-webkit-scrollbar-thumb { background: #D27D2D; border-radius: 9999px; }
-    ::-webkit-scrollbar-thumb:hover { background: #5C4033; }
+    ::-webkit-scrollbar-thumb { background: #c19a6b; border-radius: 9999px; }
+    ::-webkit-scrollbar-thumb:hover { background: #a88157; }
     @media print {
       body { background: white !important; color: black !important; }
       header, .nav-tab, button, #sec-dashboard { display: none !important; }
@@ -47,333 +48,362 @@
 <body class="h-full flex flex-col font-sans antialiased overflow-hidden" id="body-container">
 
   <!-- ÉCRAN DE CONNEXION -->
-  <div id="login-screen" class="fixed inset-0 z-[100] bg-[#fdfaf6]/95 backdrop-blur-xl flex flex-col items-center justify-center p-6 transition-opacity duration-500">
-    <div class="bg-white p-8 rounded-3xl shadow-2xl max-w-sm w-full text-center border-2 border-brandAccent">
-      <span class="text-6xl mb-4 block">🐆</span>
-      <h2 class="text-2xl font-bold text-brandDark mb-2">Carnet Léopard</h2>
-      <p class="text-sm text-stone-500 mb-8">Connectez-vous pour retrouver vos recettes équilibrées.</p>
+  <div id="login-screen" class="fixed inset-0 z-[100] bg-[#f9f6f0]/95 backdrop-blur-md flex flex-col items-center justify-center p-6 transition-opacity duration-500">
+    <div class="bg-white p-10 rounded-2xl shadow-xl max-w-sm w-full text-center border border-brandBorder">
+      <span class="text-4xl mb-4 block text-brandAccent">🍽️</span>
+      <h2 class="text-2xl font-bold text-brandPrimary mb-2 tracking-wide">Mon Carnet</h2>
+      <p class="text-sm text-stone-500 mb-8 font-light">Connexion à votre espace recettes.</p>
       
-      <input type="email" id="email-input" placeholder="Adresse e-mail" class="w-full text-center text-lg font-medium bg-stone-50 border-2 border-stone-200 rounded-xl px-4 py-3 outline-none focus:border-brandPrimary mb-3 transition-colors">
-      <input type="password" id="pwd-input" placeholder="Mot de passe" class="w-full text-center text-lg font-medium bg-stone-50 border-2 border-stone-200 rounded-xl px-4 py-3 outline-none focus:border-brandPrimary mb-6 transition-colors">
+      <input type="email" id="email-input" placeholder="Adresse e-mail" class="w-full text-center text-base bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent mb-3 transition-colors">
+      <input type="password" id="pwd-input" placeholder="Mot de passe" class="w-full text-center text-base bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent mb-6 transition-colors">
       
-      <button onclick="handleLogin()" id="btn-login" class="w-full bg-brandPrimary hover:bg-brandPrimaryHover text-white font-bold py-4 rounded-xl transition shadow-lg flex justify-center items-center">
+      <button onclick="handleLogin()" id="btn-login" class="w-full bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium tracking-wide py-3.5 rounded-lg transition shadow-md flex justify-center items-center">
         Se connecter
       </button>
-      <p id="login-error" class="text-red-500 text-sm font-bold mt-4 opacity-0 transition-opacity">Identifiants incorrects !</p>
+      <p id="login-error" class="text-red-500 text-sm font-medium mt-4 opacity-0 transition-opacity">Identifiants incorrects.</p>
     </div>
   </div>
 
   <header class="bg-white border-b border-brandBorder sticky top-0 z-30 shadow-sm">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex flex-wrap items-center justify-between gap-3">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex flex-wrap items-center justify-between gap-3">
       <div class="flex items-center space-x-3">
-        <span class="text-3xl bg-orange-100 p-2 rounded-2xl border border-orange-200">🐆</span>
+        <div class="bg-brandCardMuted p-2.5 rounded-xl border border-brandBorder text-brandAccent flex items-center justify-center">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path></svg>
+        </div>
         <div>
-          <h1 class="text-xl sm:text-2xl font-extrabold tracking-tight text-brandDark">Mes Recettes <span class="text-brandAccent">Léopard</span></h1>
-          <p class="text-xs text-stone-500 font-medium">Recettes saines (Calculées pour 4 portions par défaut)</p>
+          <h1 class="text-xl font-bold tracking-wide text-brandPrimary uppercase">Carnet <span class="text-brandAccent font-light">Équilibre</span></h1>
+          <p class="text-xs text-stone-500 font-light mt-0.5">Recettes saines & Batch Cooking</p>
         </div>
       </div>
       <div class="flex items-center gap-2">
-        <button onclick="switchTab('planning')" class="flex items-center gap-2 bg-stone-100 hover:bg-stone-200 text-stone-800 text-xs sm:text-sm font-semibold px-3 py-1.5 rounded-xl border border-stone-200 transition">
-          <span>🗓️ Menu :</span><span id="headerMenuCount" class="bg-brandAccent text-white px-2 py-0.5 rounded-full text-xs font-bold">0 plat</span>
+        <button onclick="switchTab('planning')" class="flex items-center gap-2 bg-stone-50 hover:bg-stone-100 text-brandPrimary text-xs font-medium px-3.5 py-2 rounded-lg border border-stone-200 transition">
+          <span>🗓️ Menu :</span><span id="headerMenuCount" class="bg-brandAccent text-white px-2 py-0.5 rounded-full text-xs font-bold shadow-sm">0</span>
         </button>
-        <button onclick="switchTab('shopping')" class="flex items-center gap-2 bg-brandPrimary text-white text-xs sm:text-sm font-semibold px-3.5 py-1.5 rounded-xl hover:bg-brandPrimaryHover transition shadow-sm">
-          <span>🛒 Courses</span><span id="headerShoppingBadge" class="bg-white/20 text-white px-1.5 py-0.5 rounded-lg text-xs font-bold">0</span>
+        <button onclick="switchTab('shopping')" class="flex items-center gap-2 bg-brandPrimary text-white text-xs font-medium px-4 py-2 rounded-lg hover:bg-brandPrimaryHover transition shadow-sm">
+          <span>🛒 Courses</span><span id="headerShoppingBadge" class="bg-white/20 text-white px-1.5 py-0.5 rounded-md text-xs font-bold">0</span>
         </button>
-        <button onclick="handleLogout()" class="bg-stone-100 hover:bg-stone-200 text-stone-600 text-xs px-3 py-1.5 rounded-xl border border-stone-200 transition">
-          🔓 Déco
+        <button onclick="handleLogout()" class="text-stone-400 hover:text-stone-600 text-xs px-2 py-2 transition font-medium">
+          Déconnexion
         </button>
       </div>
     </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-1 sm:space-x-4 border-t border-stone-100 overflow-x-auto no-scrollbar text-sm font-medium bg-white/80 backdrop-blur-sm">
-      <button id="tab-recipes" onclick="switchTab('recipes')" class="nav-tab text-brandPrimary border-b-2 border-brandPrimary py-2.5 px-3 whitespace-nowrap font-semibold">📖 Les Recettes</button>
-      <button id="tab-planning" onclick="switchTab('planning')" class="nav-tab text-stone-500 hover:text-brandDark border-b-2 border-transparent py-2.5 px-3 whitespace-nowrap">🗓️ Mon Planning (<span id="planningTabBadge">0</span>)</button>
-      <button id="tab-shopping" onclick="switchTab('shopping')" class="nav-tab text-stone-500 hover:text-brandDark border-b-2 border-transparent py-2.5 px-3 whitespace-nowrap">🛒 Liste de Courses</button>
-      <button id="tab-dashboard" onclick="switchTab('dashboard')" class="nav-tab text-stone-500 hover:text-brandDark border-b-2 border-transparent py-2.5 px-3 whitespace-nowrap">🐾 Astuces Équilibre</button>
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex space-x-6 border-t border-stone-100 overflow-x-auto no-scrollbar text-sm font-medium bg-white/90 backdrop-blur-sm">
+      <button id="tab-recipes" onclick="switchTab('recipes')" class="nav-tab text-brandPrimary border-b-2 border-brandPrimary py-3 whitespace-nowrap">📖 Les Recettes</button>
+      <button id="tab-planning" onclick="switchTab('planning')" class="nav-tab text-stone-400 hover:text-brandPrimary border-b-2 border-transparent py-3 whitespace-nowrap transition-colors">🗓️ Planning (<span id="planningTabBadge">0</span>)</button>
+      <button id="tab-shopping" onclick="switchTab('shopping')" class="nav-tab text-stone-400 hover:text-brandPrimary border-b-2 border-transparent py-3 whitespace-nowrap transition-colors">🛒 Courses</button>
+      <button id="tab-dashboard" onclick="switchTab('dashboard')" class="nav-tab text-stone-400 hover:text-brandPrimary border-b-2 border-transparent py-3 whitespace-nowrap transition-colors">✨ Astuces</button>
     </div>
   </header>
 
-  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-6">
+  <main class="flex-1 max-w-7xl w-full mx-auto px-4 sm:px-6 lg:px-8 py-8">
     <!-- SECTION RECIPES -->
     <section id="sec-recipes" class="space-y-6">
-      <div class="bg-white p-4 rounded-2xl border border-brandBorder shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <h2 class="text-lg font-bold text-brandDark">Bibliothèque de Recettes (Healthy)</h2>
-          <p class="text-sm text-stone-600 mt-1">Conçues avec votre liste de courses (Air Fryer, Four, Plaques). Ajoutez les vôtres !</p>
+          <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Bibliothèque de Recettes</h2>
+          <p class="text-sm text-stone-500 font-light mt-1">Conçues pour vos équipements (Air Fryer, Four, Plaques). Base de 4 portions.</p>
         </div>
-        <div class="flex items-center gap-2">
-          <button onclick="openRecipeForm()" class="inline-flex items-center gap-2 bg-brandAccent hover:bg-brandAccentHover text-white font-semibold px-4 py-2.5 rounded-xl text-sm transition shadow-sm">
-            + Ajouter une recette
+        <div class="flex items-center gap-3">
+          <button onclick="openRecipeForm()" class="inline-flex items-center gap-2 bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium px-4 py-2.5 rounded-lg text-sm transition shadow-sm">
+            + Nouvelle recette
           </button>
-          <button onclick="pickRandomRecipe()" class="inline-flex items-center gap-2 bg-orange-50 hover:bg-orange-100 text-brandAccent font-semibold px-4 py-2.5 rounded-xl border border-orange-200 text-sm transition">
-            🎲 Idée au hasard !
+          <button onclick="pickRandomRecipe()" class="inline-flex items-center gap-2 bg-brandCardMuted hover:bg-[#ebdccb] text-brandPrimary font-medium px-4 py-2.5 rounded-lg border border-brandBorder text-sm transition">
+            ✨ Inspirer
           </button>
         </div>
       </div>
 
-      <div class="bg-white p-4 rounded-2xl border border-brandBorder shadow-sm space-y-3">
-        <div class="flex flex-col sm:flex-row gap-2">
+      <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm space-y-4">
+        <div class="flex flex-col sm:flex-row gap-3">
           <div class="relative flex-1">
-            <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Rechercher (ex: poulet, brocolis, quinoa)..." class="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-stone-200 rounded-xl text-sm focus:outline-none focus:ring-2 focus:ring-brandAccent">
-            <span class="absolute left-3.5 top-3 text-stone-400">🔍</span>
+            <input type="text" id="searchInput" oninput="applyFilters()" placeholder="Rechercher un ingrédient, un plat..." class="w-full pl-10 pr-4 py-2.5 bg-stone-50 border border-stone-200 rounded-lg text-sm focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition">
+            <span class="absolute left-3.5 top-2.5 text-stone-400">
+              <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path></svg>
+            </span>
           </div>
-          <button id="btn-fav-filter" onclick="toggleFavFilter()" class="border border-red-200 bg-red-50 text-red-600 hover:bg-red-100 px-4 py-2.5 rounded-xl transition text-sm font-semibold flex items-center gap-2 shrink-0">
-            🤍 Mes Coups de Cœur
+          <button id="btn-fav-filter" onclick="toggleFavFilter()" class="border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 hover:text-brandPrimary px-4 py-2.5 rounded-lg transition text-sm font-medium flex items-center gap-2 shrink-0">
+            🤍 Favoris
           </button>
         </div>
-        <div class="flex flex-wrap gap-2 text-xs sm:text-sm">
-          <span class="self-center font-bold text-stone-500 text-xs uppercase mr-1">Protéines:</span>
-          <button onclick="setProteinFilter('all')" class="prot-filter active-filter px-3 py-1.5 rounded-lg border font-medium">Toutes</button>
-          <button onclick="setProteinFilter('poulet')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🐔 Volaille</button>
-          <button onclick="setProteinFilter('boeuf')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🥩 Bœuf</button>
-          <button onclick="setProteinFilter('porc')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🥓 Bacon/Jambon</button>
-          <button onclick="setProteinFilter('poisson')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🐟 Poisson de mer</button>
-          <button onclick="setProteinFilter('vege')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🥚 Œufs/Végé</button>
+        
+        <div class="flex flex-wrap gap-2 text-xs sm:text-sm items-center">
+          <span class="font-medium text-stone-400 text-xs uppercase tracking-wider mr-2">Protéines</span>
+          <button onclick="setProteinFilter('all')" class="prot-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition">Toutes</button>
+          <button onclick="setProteinFilter('poulet')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Volaille</button>
+          <button onclick="setProteinFilter('boeuf')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Bœuf</button>
+          <button onclick="setProteinFilter('porc')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Bacon/Porc</button>
+          <button onclick="setProteinFilter('poisson')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Poisson</button>
+          <button onclick="setProteinFilter('vege')" class="prot-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Végé / Œufs</button>
         </div>
-        <div class="flex flex-wrap gap-2 text-xs sm:text-sm pt-1 border-t border-stone-100">
-          <span class="self-center font-bold text-stone-500 text-xs uppercase mr-1">Appareil:</span>
-          <button onclick="setEquipFilter('all')" class="equip-filter active-filter px-3 py-1.5 rounded-lg border font-medium">Tous</button>
-          <button onclick="setEquipFilter('four')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🔥 Four</button>
-          <button onclick="setEquipFilter('plaques')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">🍳 Plaques</button>
-          <button onclick="setEquipFilter('airfryer')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">⚡ Air Fryer</button>
-          <button onclick="setEquipFilter('froid')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-700 px-3 py-1.5 rounded-lg">❄️ Froid / Sans Cuisson</button>
+        
+        <div class="flex flex-wrap gap-2 text-xs sm:text-sm items-center pt-3 border-t border-stone-100">
+          <span class="font-medium text-stone-400 text-xs uppercase tracking-wider mr-2">Cuisson</span>
+          <button onclick="setEquipFilter('all')" class="equip-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition">Tous</button>
+          <button onclick="setEquipFilter('four')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Four</button>
+          <button onclick="setEquipFilter('plaques')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Plaques</button>
+          <button onclick="setEquipFilter('airfryer')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Air Fryer</button>
+          <button onclick="setEquipFilter('froid')" class="equip-filter border border-stone-200 bg-stone-50 text-stone-600 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition">Froid</button>
         </div>
       </div>
-      <div class="flex items-center justify-between text-xs sm:text-sm text-stone-500 font-medium px-1">
-        <span id="recipesResultCount">Affichage des recettes</span>
-        <button onclick="resetFilters()" class="text-brandAccent hover:underline text-xs">Réinitialiser</button>
+      
+      <div class="flex items-center justify-between text-xs sm:text-sm text-stone-400 font-light px-1">
+        <span id="recipesResultCount">...</span>
+        <button onclick="resetFilters()" class="hover:text-brandPrimary transition">Réinitialiser les filtres</button>
       </div>
-      <div id="recipeGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+      <div id="recipeGrid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"></div>
     </section>
 
     <!-- SECTION PLANNING -->
     <section id="sec-planning" class="hidden space-y-6 print-title">
-      <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm">
-        <h2 class="text-lg font-bold text-brandDark">Votre Menu de la Semaine</h2>
-        <p class="text-sm text-stone-600 mt-1">Gérez facilement les repas prévus pour les jours à venir.</p>
+      <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm">
+        <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Menu de la Semaine</h2>
+        <p class="text-sm text-stone-500 font-light mt-1">Organisez vos repas et générez votre liste de courses automatiquement.</p>
       </div>
-      <div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
-        <div class="bg-white p-4 rounded-2xl border shadow-sm text-center">
-          <p class="text-xs font-bold uppercase text-stone-400">Recettes retenues</p>
-          <p id="planCountBig" class="text-3xl font-extrabold text-brandPrimary mt-1">0</p>
+      <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+        <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col items-center justify-center">
+          <p class="text-xs font-medium uppercase tracking-widest text-stone-400">Recettes</p>
+          <p id="planCountBig" class="text-4xl font-bold text-brandPrimary mt-2">0</p>
         </div>
-        <div class="bg-white p-4 rounded-2xl border shadow-sm text-center">
-          <p class="text-xs font-bold uppercase text-stone-400">Total Portions</p>
-          <p id="planPortionsBig" class="text-3xl font-extrabold text-brandAccent mt-1">0</p>
+        <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col items-center justify-center">
+          <p class="text-xs font-medium uppercase tracking-widest text-stone-400">Portions</p>
+          <p id="planPortionsBig" class="text-4xl font-bold text-brandAccent mt-2">0</p>
         </div>
-        <div class="bg-white p-4 rounded-2xl border shadow-sm flex flex-col justify-center">
-          <button onclick="switchTab('shopping')" class="w-full bg-brandPrimary hover:bg-brandPrimaryHover text-white font-bold py-2.5 px-4 rounded-xl shadow">🛒 Voir les courses</button>
-          <button onclick="clearPlanning()" class="text-xs text-stone-400 hover:text-red-500 underline mt-2 text-center">Vider le menu</button>
+        <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col justify-center gap-3">
+          <button onclick="switchTab('shopping')" class="w-full bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium py-3 rounded-lg shadow-sm transition">🛒 Voir les courses</button>
+          <button onclick="clearPlanning()" class="text-xs text-stone-400 hover:text-red-500 transition text-center">Vider le menu complet</button>
         </div>
       </div>
-      <div class="bg-white rounded-2xl border shadow-sm p-4 sm:p-6">
-        <h3 class="text-base font-bold text-brandDark mb-4">📋 Recettes de votre semaine</h3>
-        <div id="planningListContainer" class="space-y-4"></div>
+      <div class="bg-white rounded-2xl border border-brandBorder shadow-sm p-6">
+        <h3 class="text-base font-bold text-brandPrimary mb-5 flex items-center gap-2"><svg class="w-5 h-5 text-brandAccent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2m-3 7h3m-3 4h3m-6-4h.01M9 16h.01"></path></svg> Sélection</h3>
+        <div id="planningListContainer" class="space-y-3"></div>
       </div>
     </section>
 
     <!-- SECTION SHOPPING -->
     <section id="sec-shopping" class="hidden space-y-6 print-title">
-      <div class="bg-white p-5 rounded-2xl border shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
+      <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm flex flex-col lg:flex-row lg:items-center justify-between gap-4">
         <div>
-          <h2 class="text-lg font-bold text-brandDark">Liste de Courses</h2>
-          <p class="text-sm text-stone-600">Générée automatiquement par rayons.</p>
+          <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Liste de Courses</h2>
+          <p class="text-sm text-stone-500 font-light mt-1">Générée automatiquement et triée par rayons.</p>
         </div>
-        <div class="flex gap-2">
-          <button onclick="window.print()" class="bg-stone-100 hover:bg-stone-200 px-3 py-2 rounded-xl text-xs font-bold border border-stone-200">🖨️ Imprimer</button>
-          <button onclick="resetShoppingCheckboxes()" class="bg-stone-100 hover:bg-stone-200 px-3 py-2 rounded-xl text-xs font-bold border border-stone-200">🔄 Décocher</button>
+        <div class="flex gap-3">
+          <button onclick="window.print()" class="bg-white text-stone-600 hover:bg-stone-50 hover:text-brandPrimary px-4 py-2 rounded-lg text-sm font-medium border border-stone-200 transition shadow-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 17h2a2 2 0 002-2v-4a2 2 0 00-2-2H5a2 2 0 00-2 2v4a2 2 0 002 2h2m2 4h6a2 2 0 002-2v-4a2 2 0 00-2-2H9a2 2 0 00-2 2v4a2 2 0 002 2zm8-12V5a2 2 0 00-2-2H9a2 2 0 00-2 2v4h10z"></path></svg> Imprimer
+          </button>
+          <button onclick="resetShoppingCheckboxes()" class="bg-white text-stone-600 hover:bg-stone-50 hover:text-brandPrimary px-4 py-2 rounded-lg text-sm font-medium border border-stone-200 transition shadow-sm flex items-center gap-2">
+            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path></svg> Décocher
+          </button>
         </div>
       </div>
-      <div class="bg-white p-4 rounded-2xl border shadow-sm flex flex-col sm:flex-row gap-2 print:hidden">
-        <input type="text" id="customItemInput" placeholder="Ajouter (ex: Savon)..." class="flex-1 bg-stone-50 border rounded-xl px-3.5 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brandPrimary">
-        <select id="customItemAisle" class="bg-stone-50 border rounded-xl px-3 py-2 text-xs focus:outline-none">
-          <option value="Boucherie / Poissonnerie">🥩 Boucherie/Poissons</option>
-          <option value="Légumes & Fruits">🥦 Légumes/Fruits</option>
-          <option value="Épicerie & Féculents">🌾 Épicerie</option>
-          <option value="Produits Frais & Crémerie">🧀 Frais/Crémerie</option>
-          <option value="Divers / Hors Cuisine" selected>🛍️ Divers</option>
+      
+      <div class="bg-white p-5 rounded-2xl border border-brandBorder shadow-sm flex flex-col sm:flex-row gap-3 print:hidden">
+        <input type="text" id="customItemInput" placeholder="Ajouter un article hors recettes..." class="flex-1 bg-stone-50 border border-stone-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brandAccent transition">
+        <select id="customItemAisle" class="bg-stone-50 border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none text-stone-600">
+          <option value="Boucherie / Poissonnerie">Boucherie / Poissons</option>
+          <option value="Légumes & Fruits">Légumes / Fruits</option>
+          <option value="Épicerie & Féculents">Épicerie</option>
+          <option value="Produits Frais & Crémerie">Frais / Crémerie</option>
+          <option value="Divers / Hors Cuisine" selected>Divers</option>
         </select>
-        <button onclick="addCustomShoppingItem()" class="bg-brandAccent hover:bg-brandAccentHover text-white font-bold px-4 py-2 rounded-xl text-sm">+ Ajouter</button>
+        <button onclick="addCustomShoppingItem()" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium px-5 py-2.5 rounded-lg text-sm transition shadow-sm">Ajouter</button>
       </div>
-      <div id="shoppingAislesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-5"></div>
+      
+      <div id="shoppingAislesContainer" class="grid grid-cols-1 md:grid-cols-2 gap-6"></div>
     </section>
 
     <!-- SECTION DASHBOARD -->
     <section id="sec-dashboard" class="hidden space-y-6">
-      <div class="bg-white p-5 rounded-2xl border shadow-sm">
-        <h2 class="text-lg font-bold text-brandDark">Astuces Santé & Équilibre 🐆</h2>
+      <div class="bg-white p-6 rounded-2xl border border-brandBorder shadow-sm">
+        <h2 class="text-lg font-bold text-brandPrimary tracking-wide">Astuces Santé & Équilibre ✨</h2>
+        <p class="text-sm text-stone-500 font-light mt-1">Rappels pour vos repas et vos séances de sport.</p>
       </div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
-        <div class="bg-orange-50 border border-orange-200 p-5 rounded-2xl space-y-2">
-          <div class="text-2xl">💪</div><h4 class="font-bold text-orange-900">Protéines = Récupération</h4>
-          <p class="text-xs text-stone-700">Idéal après le sport pour développer la masse musculaire. Vos alliés : Poulet, dinde, œufs, thon, saumon, lentilles et pois chiches.</p>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white border border-brandBorder p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="text-brandAccent bg-brandCardMuted w-10 h-10 rounded-lg flex items-center justify-center border border-brandBorder">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path></svg>
+          </div>
+          <h4 class="font-bold text-brandPrimary">Protéines = Récupération</h4>
+          <p class="text-sm text-stone-500 font-light leading-relaxed">Idéal après le sport pour le maintien musculaire. Vos alliés : Poulet, dinde, œufs, thon, saumon, lentilles et pois chiches[cite: 1].</p>
         </div>
-        <div class="bg-emerald-50 border border-emerald-200 p-5 rounded-2xl space-y-2">
-          <div class="text-2xl">⚡</div><h4 class="font-bold text-emerald-900">Glucides = Carburant</h4>
-          <p class="text-xs text-stone-700">Privilégiez le riz, les patates douces, les flocons d'avoine ou le pain complet pour une énergie diffuse tout au long de la journée sans pic de glycémie.</p>
+        <div class="bg-white border border-brandBorder p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="text-brandAccent bg-brandCardMuted w-10 h-10 rounded-lg flex items-center justify-center border border-brandBorder">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path></svg>
+          </div>
+          <h4 class="font-bold text-brandPrimary">Glucides = Carburant</h4>
+          <p class="text-sm text-stone-500 font-light leading-relaxed">Privilégiez le riz, les patates douces, l'avoine ou le pain complet pour une énergie diffuse sans pic de glycémie[cite: 1].</p>
         </div>
-        <div class="bg-sky-50 border border-sky-200 p-5 rounded-2xl space-y-2">
-          <div class="text-2xl">🥑</div><h4 class="font-bold text-sky-900">Bons Lipides</h4>
-          <p class="text-xs text-stone-700">L'avocat, l'huile d'olive, les amandes et le beurre de cacahuète sont indispensables pour la santé. À doser intelligemment dans vos gamelles !</p>
+        <div class="bg-white border border-brandBorder p-6 rounded-2xl shadow-sm space-y-3">
+          <div class="text-brandAccent bg-brandCardMuted w-10 h-10 rounded-lg flex items-center justify-center border border-brandBorder">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"></path></svg>
+          </div>
+          <h4 class="font-bold text-brandPrimary">Bons Lipides</h4>
+          <p class="text-sm text-stone-500 font-light leading-relaxed">L'avocat, l'huile d'olive et les oléagineux sont indispensables[cite: 1]. À doser intelligemment pour le goût et la santé !</p>
         </div>
       </div>
     </section>
   </main>
 
   <!-- MODAL DETAILS RECETTE -->
-  <div id="recipeModal" class="fixed inset-0 bg-[#2c1e16]/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white w-full max-w-2xl max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col border-2 border-brandAccent">
-      <div class="p-5 bg-[#fdfaf6] border-b border-brandBorder flex items-start justify-between gap-3 shrink-0">
+  <div id="recipeModal" class="fixed inset-0 bg-brandDark/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity">
+    <div class="bg-white w-full max-w-2xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-brandBorder">
+      <div class="p-6 bg-white border-b border-stone-100 flex items-start justify-between gap-4 shrink-0">
         <div>
-          <div class="flex items-center gap-2 mb-1" id="modalBadges"></div>
-          <h3 id="modalTitle" class="text-xl font-bold text-brandDark">Titre Recette</h3>
+          <div class="flex items-center gap-2 mb-2" id="modalBadges"></div>
+          <h3 id="modalTitle" class="text-2xl font-bold text-brandPrimary tracking-tight">Titre Recette</h3>
         </div>
-        <button onclick="closeModal()" class="text-brandPrimary hover:text-brandAccent text-2xl font-bold p-1 rounded-lg">✕</button>
+        <button onclick="closeModal()" class="text-stone-400 hover:text-brandAccent bg-stone-50 hover:bg-brandCardMuted rounded-full p-2 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
       </div>
-      <div class="p-6 overflow-y-auto space-y-6 text-sm">
-        <div class="grid grid-cols-3 gap-3 bg-orange-50 p-3.5 rounded-2xl text-center text-xs font-semibold text-orange-900">
-          <div>⏱️ <span id="modalPrepTime"></span></div>
-          <div>🔥 <span id="modalCookTime"></span></div>
-          <div>👨‍🍳 <span id="modalEquipText"></span></div>
+      <div class="p-6 overflow-y-auto space-y-8 text-sm">
+        <div class="grid grid-cols-3 gap-4 bg-[#f9f6f0] p-4 rounded-xl border border-brandBorder text-center text-xs font-medium text-brandPrimary shadow-inner">
+          <div class="flex flex-col gap-1 items-center"><span class="text-lg">⏱️</span> <span id="modalPrepTime"></span></div>
+          <div class="flex flex-col gap-1 items-center"><span class="text-lg">🔥</span> <span id="modalCookTime"></span></div>
+          <div class="flex flex-col gap-1 items-center"><span class="text-lg">👨‍🍳</span> <span id="modalEquipText"></span></div>
         </div>
+        
         <div>
-          <h4 class="font-bold text-brandDark text-base mb-2">🛒 Ingrédients (4 portions)</h4>
-          <ul id="modalIngredientsList" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-700 font-medium"></ul>
+          <h4 class="font-bold text-brandPrimary text-base mb-3 flex items-center gap-2"><span class="text-brandAccent">🛒</span> Ingrédients (4 portions)</h4>
+          <ul id="modalIngredientsList" class="grid grid-cols-1 sm:grid-cols-2 gap-2 text-stone-600"></ul>
         </div>
+        
         <div>
-          <h4 class="font-bold text-brandDark text-base mb-2">👨‍🍳 Étapes</h4>
-          <ol id="modalStepsList" class="space-y-2.5 text-stone-700 list-decimal list-inside"></ol>
+          <h4 class="font-bold text-brandPrimary text-base mb-3 flex items-center gap-2"><span class="text-brandAccent">📝</span> Préparation</h4>
+          <ol id="modalStepsList" class="space-y-3 text-stone-600 list-decimal list-inside leading-relaxed"></ol>
         </div>
-        <div class="bg-emerald-50 border border-emerald-200 p-4 rounded-2xl text-xs text-emerald-900">
-          <p class="font-bold">💡 Astuce Nutrition & Batch Cooking :</p>
-          <p id="modalGamelleTip" class="text-stone-700 mt-1"></p>
+        
+        <div class="bg-brandCardMuted border border-brandAccent p-4 rounded-xl text-xs text-brandPrimary">
+          <p class="font-bold uppercase tracking-wider text-[10px] text-brandAccent mb-1">💡 Astuce Équilibre</p>
+          <p id="modalGamelleTip" class="font-medium leading-relaxed"></p>
         </div>
       </div>
-      <div class="p-4 bg-[#fdfaf6] border-t border-brandBorder flex justify-between items-center shrink-0">
+      <div class="p-5 bg-white border-t border-stone-100 flex justify-between items-center shrink-0">
         <div>
-          <button onclick="closeModal()" class="px-4 py-2 text-stone-600 font-semibold text-xs rounded-xl hover:bg-stone-200">Fermer</button>
-          <button id="modalEditBtn" class="px-4 py-2 text-brandPrimary font-semibold text-xs rounded-xl hover:bg-stone-200 border border-brandBorder ml-2">✏️ Modifier</button>
+          <button onclick="closeModal()" class="px-5 py-2.5 text-stone-500 font-medium text-sm rounded-lg hover:bg-stone-50 transition">Fermer</button>
+          <button id="modalEditBtn" class="px-5 py-2.5 text-brandAccent font-medium text-sm rounded-lg hover:bg-brandCardMuted transition ml-2">Éditer</button>
         </div>
-        <button id="modalActionBtn" onclick="" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow">+ Ajouter au menu</button>
+        <button id="modalActionBtn" onclick="" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium px-6 py-2.5 rounded-lg text-sm shadow-md transition">+ Au menu</button>
       </div>
     </div>
   </div>
 
   <!-- MODAL AJOUT/MODIFICATION RECETTE -->
-  <div id="addRecipeModal" class="fixed inset-0 bg-[#2c1e16]/60 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4">
-    <div class="bg-white w-full max-w-lg max-h-[90vh] rounded-3xl shadow-2xl overflow-hidden flex flex-col border-2 border-brandAccent">
-      <div class="p-5 bg-[#fdfaf6] border-b border-brandBorder flex items-center justify-between shrink-0">
-        <h3 id="addRecipeModalTitle" class="text-lg font-bold text-brandDark">Ajouter une nouvelle recette</h3>
-        <button onclick="closeAddRecipeModal()" class="text-brandPrimary hover:text-brandAccent text-2xl font-bold">✕</button>
+  <div id="addRecipeModal" class="fixed inset-0 bg-brandDark/80 backdrop-blur-sm z-50 hidden flex items-center justify-center p-4 transition-opacity">
+    <div class="bg-white w-full max-w-xl max-h-[90vh] rounded-2xl shadow-2xl overflow-hidden flex flex-col border border-brandBorder">
+      <div class="p-6 bg-white border-b border-stone-100 flex items-center justify-between shrink-0">
+        <h3 id="addRecipeModalTitle" class="text-lg font-bold text-brandPrimary tracking-wide">Nouvelle recette</h3>
+        <button onclick="closeAddRecipeModal()" class="text-stone-400 hover:text-brandAccent bg-stone-50 hover:bg-brandCardMuted rounded-full p-2 transition">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path></svg>
+        </button>
       </div>
-      <div class="p-6 overflow-y-auto space-y-4 text-sm">
+      <div class="p-6 overflow-y-auto space-y-5 text-sm">
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Titre de la recette</label>
-          <input type="text" id="newRecTitle" placeholder="Ex: Salade de pâtes, poulet, pesto..." class="w-full bg-white border border-brandBorder rounded-xl px-3.5 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-brandAccent">
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Titre de la recette</label>
+          <input type="text" id="newRecTitle" placeholder="Ex: Salade de pâtes & pesto..." class="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition">
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Protéine</label>
-            <select id="newRecProt" class="w-full bg-white border border-brandBorder rounded-xl px-3 py-2.5 text-sm">
-              <option value="poulet">🐔 Volaille</option>
-              <option value="boeuf">🥩 Bœuf</option>
-              <option value="porc">🥓 Bacon/Jambon</option>
-              <option value="poisson">🐟 Poisson</option>
-              <option value="vege">🥚 Œufs/Végé</option>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Protéine</label>
+            <select id="newRecProt" class="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brandAccent transition">
+              <option value="poulet">Volaille</option>
+              <option value="boeuf">Bœuf</option>
+              <option value="porc">Bacon / Jambon</option>
+              <option value="poisson">Poisson</option>
+              <option value="vege">Œufs / Végé</option>
             </select>
           </div>
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Appareil</label>
-            <select id="newRecEquip" class="w-full bg-white border border-brandBorder rounded-xl px-3 py-2.5 text-sm">
-              <option value="plaques">🍳 Plaques/Poêle</option>
-              <option value="four">🔥 Four</option>
-              <option value="airfryer">⚡ Air Fryer</option>
-              <option value="froid">❄️ Froid / Sans cuisson</option>
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Cuisson</label>
+            <select id="newRecEquip" class="w-full bg-stone-50 border border-stone-200 rounded-lg px-3 py-2.5 text-sm focus:outline-none focus:border-brandAccent transition">
+              <option value="plaques">Plaques / Poêle</option>
+              <option value="four">Four</option>
+              <option value="airfryer">Air Fryer</option>
+              <option value="froid">Froid / Sans cuisson</option>
             </select>
           </div>
         </div>
-        <div class="grid grid-cols-2 gap-3">
+        <div class="grid grid-cols-2 gap-4">
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Temps prépa</label>
-            <input type="text" id="newRecPrep" value="10 min" class="w-full bg-white border border-brandBorder rounded-xl px-3.5 py-2 text-sm">
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Temps prépa</label>
+            <input type="text" id="newRecPrep" value="10 min" class="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-brandAccent transition">
           </div>
           <div>
-            <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Temps cuisson</label>
-            <input type="text" id="newRecCook" value="15 min" class="w-full bg-white border border-brandBorder rounded-xl px-3.5 py-2 text-sm">
+            <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Temps cuisson</label>
+            <input type="text" id="newRecCook" value="15 min" class="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-2 text-sm focus:outline-none focus:border-brandAccent transition">
           </div>
         </div>
         
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Ingrédients</label>
-          <div id="dynamicIngredientsContainer" class="space-y-2 mb-2">
-            <!-- JavaScript va injecter les lignes ici -->
-          </div>
-          <button type="button" onclick="addIngredientRow()" class="text-brandAccent font-bold text-xs hover:underline flex items-center gap-1">
-            <span class="text-lg leading-none">+</span> Ajouter un ingrédient
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Ingrédients</label>
+          <div id="dynamicIngredientsContainer" class="space-y-2 mb-3"></div>
+          <button type="button" onclick="addIngredientRow()" class="text-brandAccent font-medium text-sm hover:text-brandAccentHover flex items-center gap-1 transition">
+            <span>+ Ajouter un ingrédient</span>
           </button>
         </div>
 
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Étapes (une par ligne)</label>
-          <textarea id="newRecSteps" rows="4" placeholder="1. Éplucher les légumes...&#10;2. Cuire à la poêle..." class="w-full bg-white border border-brandBorder rounded-xl px-3.5 py-2 text-sm"></textarea>
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Étapes (une par ligne)</label>
+          <textarea id="newRecSteps" rows="4" placeholder="1. Éplucher les légumes...&#10;2. Cuire à la poêle..." class="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-3 text-sm focus:outline-none focus:border-brandAccent focus:ring-1 focus:ring-brandAccent transition"></textarea>
         </div>
         <div>
-          <label class="block text-xs font-bold uppercase tracking-wider text-stone-500 mb-1">Astuce / Conseil</label>
-          <input type="text" id="newRecTip" placeholder="Se conserve très bien..." class="w-full bg-white border border-brandBorder rounded-xl px-3.5 py-2 text-sm">
+          <label class="block text-xs font-bold uppercase tracking-wider text-stone-400 mb-1.5">Astuce Équilibre</label>
+          <input type="text" id="newRecTip" placeholder="Se conserve très bien..." class="w-full bg-stone-50 border border-stone-200 rounded-lg px-4 py-2.5 text-sm focus:outline-none focus:border-brandAccent transition">
         </div>
       </div>
-      <div class="p-4 bg-[#fdfaf6] border-t border-brandBorder flex justify-end gap-2 shrink-0">
-        <button onclick="closeAddRecipeModal()" class="px-4 py-2 text-stone-600 font-semibold text-xs rounded-xl hover:bg-stone-200">Annuler</button>
-        <button id="addRecipeModalBtn" onclick="submitNewRecipe()" class="bg-brandAccent hover:bg-brandAccentHover text-white font-bold px-5 py-2.5 rounded-xl text-sm shadow">Enregistrer la recette</button>
+      <div class="p-5 bg-white border-t border-stone-100 flex justify-end gap-3 shrink-0">
+        <button onclick="closeAddRecipeModal()" class="px-5 py-2.5 text-stone-500 font-medium text-sm rounded-lg hover:bg-stone-50 transition">Annuler</button>
+        <button id="addRecipeModalBtn" onclick="submitNewRecipe()" class="bg-brandPrimary hover:bg-brandPrimaryHover text-white font-medium px-6 py-2.5 rounded-lg text-sm shadow-md transition">Enregistrer</button>
       </div>
     </div>
   </div>
 
+  <!-- INCLUSION DE FIREBASE -->
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-app.js";
     import { getAuth, signInWithEmailAndPassword, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-auth.js";
     import { getFirestore, doc, setDoc, updateDoc, onSnapshot } from "https://www.gstatic.com/firebasejs/11.6.1/firebase-firestore.js";
 
-    // VOS CLÉS FIREBASE
+    // VOS CLÉS FIREBASE INTÉGRÉES
     const firebaseConfig = {
       apiKey: "AIzaSyBeHd4_InbQ6RQZhTsYjhgrhIWm7_zU8yI",
       authDomain: "idoia-557a3.firebaseapp.com",
       projectId: "idoia-557a3",
       storageBucket: "idoia-557a3.firebasestorage.app",
       messagingSenderId: "423163077917",
-      appId: "1:423163077917:web:b0b59c9774dc73335d2df4"
+      appId: "1:423163077917:web:c0c26d9f2f3da0445d2df4"
     };
 
     const app = initializeApp(firebaseConfig);
     const auth = getAuth(app);
     const db = getFirestore(app);
 
-    // BASE DE DONNÉES 25 RECETTES SUR MESURE (À partir de votre liste[cite: 1])
+    // BASE DE DONNÉES 25 RECETTES SUR MESURE
     const baseRecipesData = [
-      { id: 1, title: "Poulet rôti au pesto et patate douce", prot: "poulet", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Blanc de poulet",qty:"600g",aisle:"Boucherie / Poissonnerie"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"}], steps: ["Couper la patate douce en cubes et les tomates cerises en deux.","Mélanger avec un filet d'huile d'olive, sel, poivre et étaler sur la plaque du four.","Enrober les blancs de poulet de pesto et les poser sur les légumes.","Cuire au four 25 min à 200°C."], gamelleTip: "Le pesto apporte les bons lipides. Les patates douces sont un excellent glucide pour la musculation." },
-      { id: 2, title: "Steak haché, purée de chou-fleur & haricots", prot: "boeuf", equip: "plaques", prep: "15 min", cook: "15 min", ingredients: [{name:"Steak haché 5%",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur (frais ou surgelé)",qty:"800g",aisle:"Légumes & Fruits"},{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Cottage cheese ou Skyr",qty:"2 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire le chou-fleur et les haricots verts à la vapeur.","Mixer le chou-fleur avec le cottage cheese, sel et poivre pour faire une purée onctueuse.","Cuire les steaks à la poêle selon la cuisson désirée.","Dresser le steak avec la purée et les haricots verts."], gamelleTip: "La purée de chou-fleur est très rassasiante et remplace parfaitement la pomme de terre en version allégée." },
-      { id: 3, title: "Saumon grillé au Air Fryer, riz & courgettes", prot: "poisson", equip: "airfryer", prep: "5 min", cook: "12 min", ingredients: [{name:"Saumon (pavés)",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Courgettes",qty:"3",aisle:"Légumes & Fruits"},{name:"Riz",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Huile d'olive & Herbes",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Couper les courgettes en rondelles.","Placer les courgettes et le saumon dans le Air Fryer. Ajouter un filet d'huile et des herbes.","Cuire 12 min à 190°C.","Servir avec le riz préalablement cuit à l'eau."], gamelleTip: "Le saumon est riche en bonnes graisses (Oméga 3). La cuisson Air Fryer évite tout ajout de matière grasse inutile." },
-      { id: 4, title: "Wrap Dinde, Avocat & Cottage Cheese", prot: "poulet", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas complètes",qty:"4",aisle:"Épicerie & Féculents"},{name:"Blanc de dinde (tranches)",qty:"8 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Cottage cheese",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Salade / Mâche",qty:"1 poignée",aisle:"Légumes & Fruits"}], steps: ["Tartiner généreusement les wraps de cottage cheese.","Disposer les tranches de dinde, l'avocat en lamelles et la salade.","Rouler le wrap fermement et le couper en deux."], gamelleTip: "Parfait pour un déjeuner sans réchauffage. L'avocat et le cottage cheese rendent le wrap ultra moelleux." },
-      { id: 5, title: "Gnocchis poêlés, épinards & tomates", prot: "vege", equip: "plaques", prep: "5 min", cook: "10 min", ingredients: [{name:"Gnocchis (à poêler ou frais)",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"},{name:"St Môret ou Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Faire dorer les gnocchis dans une poêle anti-adhésive.","Ajouter les tomates cerises coupées en deux et laisser fondre 3 min.","Ajouter les épinards frais, remuer jusqu'à ce qu'ils réduisent.","Ajouter le fromage hors du feu pour créer une petite sauce crémeuse."], gamelleTip: "Les épinards sont pleins de fer. Le fromage frais lie le tout sans ajout de crème liquide." },
-      { id: 6, title: "Salade de lentilles, thon, concombre & feta", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Lentilles (en boîte, égouttées)",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Concombre & Tomates",qty:"1 concombre, 2 tomates",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Rincer abondamment les lentilles à l'eau froide.","Couper le concombre, les tomates et la feta en petits dés.","Mélanger tous les ingrédients avec le thon émietté.","Assaisonner avec un filet d'huile d'olive et du jus de citron."], gamelleTip: "Un classique indémodable du repas sportif : glucides complexes, protéines et fraîcheur." },
-      { id: 7, title: "Crevettes sautées aux poivrons & semoule", prot: "poisson", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Crevettes décortiquées",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Poivrons (surgelés ou frais)",qty:"400g",aisle:"Légumes & Fruits"},{name:"Semoule complète",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Oignon",qty:"1",aisle:"Légumes & Fruits"}], steps: ["Préparer la semoule en versant de l'eau bouillante dessus, couvrir 5 min.","Faire revenir l'oignon émincé et les poivrons à la poêle.","Ajouter les crevettes et sauter 3 min jusqu'à ce qu'elles soient roses.","Servir les crevettes sur le lit de semoule."], gamelleTip: "Les crevettes sont presque 100% protéinées. Parfait avec la semoule complète pour l'énergie." },
-      { id: 8, title: "Omelette champignons, épinards & pain de seigle", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Champignons frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Épinards frais",qty:"200g",aisle:"Légumes & Fruits"},{name:"Pain de seigle",qty:"4 belles tranches",aisle:"Épicerie & Féculents"}], steps: ["Faire revenir les champignons émincés dans une poêle jusqu'à évaporation de leur eau.","Ajouter les épinards et laisser réduire 1 min.","Battre les œufs, saler, poivrer, et verser dans la poêle. Cuire à feu moyen.","Manger avec le pain de seigle toasté."], gamelleTip: "Le pain de seigle a un index glycémique plus bas que le pain blanc. Excellente source de fibres." },
-      { id: 9, title: "Aubergines farcies au bœuf & coulis tomate", prot: "boeuf", equip: "four", prep: "15 min", cook: "40 min", ingredients: [{name:"Aubergines",qty:"2 grosses",aisle:"Légumes & Fruits"},{name:"Steak haché ou Bœuf haché",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Coulis de tomate / Ratatouille",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Riz",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en deux, quadriller la chair et précuire 20 min au four à 200°C.","Creuser la chair, la hacher et la mélanger avec le bœuf cru et le coulis de tomate.","Farcir les coques d'aubergine, remettre au four 20 min.","Servir avec un peu de riz."], gamelleTip: "Précuire l'aubergine au four évite qu'elle ne boive l'huile comme une éponge à la poêle." },
-      { id: 10, title: "Galette bretonne, jambon, œuf & champignons", prot: "porc", equip: "plaques", prep: "5 min", cook: "5 min", ingredients: [{name:"Galettes bretonnes (sarrasin)",qty:"4",aisle:"Épicerie & Féculents"},{name:"Jambon blanc",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Œufs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Champignons (en boîte ou frais sautés)",qty:"200g",aisle:"Légumes & Fruits"}], steps: ["Chauffer la galette dans une grande poêle.","Casser un œuf au centre, étaler légèrement le blanc.","Ajouter une tranche de jambon et des champignons.","Replier les bords de la galette et laisser cuire jusqu'à ce que le blanc soit pris."], gamelleTip: "La galette de sarrasin est un excellent glucide. Se réchauffe très bien au micro-ondes." },
-      { id: 11, title: "Bowl Riz, Sardines, Avocat & Algues", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Sardines en boîte",qty:"2 boîtes",aisle:"Boucherie / Poissonnerie"},{name:"Riz cuit (froid)",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Avocat & Concombre",qty:"1 avocat, 1/2 concombre",aisle:"Légumes & Fruits"},{name:"Feuilles d'algues (Nori)",qty:"1 sachet",aisle:"Épicerie & Féculents"}], steps: ["Couper l'avocat et le concombre en dés.","Égoutter légèrement les sardines.","Dans un bol, disposer le riz, ajouter les sardines, l'avocat et le concombre.","Émietter les feuilles d'algues sur le dessus avec un filet de sauce soja."], gamelleTip: "Les sardines sont incroyables pour la santé (Oméga 3). Repas froid rapide et efficace." },
-      { id: 12, title: "Pois chiches rôtis, carottes & Skyr (Air Fryer)", prot: "vege", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Pois chiches en boîte",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Carottes",qty:"6",aisle:"Légumes & Fruits"},{name:"Skyr",qty:"200g",aisle:"Produits Frais & Crémerie"},{name:"Paprika ou épices",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Rincer et sécher les pois chiches. Éplucher et couper les carottes en bâtonnets.","Mélanger avec 1 c.a.s d'huile d'olive et le paprika.","Cuire au Air Fryer 20 min à 190°C en secouant à mi-cuisson.","Servir avec le Skyr assaisonné (sel, poivre, herbes) en guise de sauce."], gamelleTip: "Des protéines végétales croquantes. Le Skyr fait une super sauce dip très protéinée." },
-      { id: 13, title: "Pâtes au saumon & brocolis, sauce Skyr", prot: "poisson", equip: "plaques", prep: "10 min", cook: "15 min", ingredients: [{name:"Saumon (frais ou fumé)",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Pâtes (complètes de préférence)",qty:"250g",aisle:"Épicerie & Féculents"},{name:"Brocolis (surgelés ou frais)",qty:"400g",aisle:"Légumes & Fruits"},{name:"Skyr",qty:"3 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire les pâtes et les brocolis dans la même casserole d'eau bouillante.","Égoutter. Si saumon frais : le cuire à la poêle. Si fumé : le couper en lamelles.","Mélanger les pâtes, les brocolis, le saumon et le Skyr hors du feu."], gamelleTip: "Le Skyr remplace la crème fraîche épaisse et rend le plat crémeux mais diététique." },
-      { id: 14, title: "Poulet rôti, aubergines au four & semoule", prot: "poulet", equip: "four", prep: "10 min", cook: "30 min", ingredients: [{name:"Blanc de poulet",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Aubergines",qty:"2",aisle:"Légumes & Fruits"},{name:"Semoule",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en cubes et le poulet en gros morceaux.","Placer sur une plaque de four, ajouter les herbes et un filet d'huile d'olive.","Cuire 30 min à 200°C.","Préparer la semoule à l'eau bouillante et mélanger le tout."], gamelleTip: "L'aubergine fond au four et lie parfaitement la semoule sans rajouter de sauce." },
-      { id: 15, title: "Salade de pâtes, poulet, tomates & pesto", prot: "poulet", equip: "froid", prep: "10 min", cook: "10 min", ingredients: [{name:"Pâtes (crues)",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Blanc de poulet cuit (ou restes)",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Tomates & Mâche",qty:"3 tomates, 1 poignée mâche",aisle:"Légumes & Fruits"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire les pâtes et les refroidir sous l'eau froide.","Couper les tomates en dés et le poulet en lamelles.","Dans un grand saladier, mélanger les pâtes, le pesto, le poulet, les tomates et la mâche."], gamelleTip: "Le pesto est riche en lipides, 2 cuillères à soupe suffisent largement pour parfumer 4 portions." },
-      { id: 16, title: "Steak haché & frites de patate douce (Air Fryer)", prot: "boeuf", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Steak haché (ou blanc de dinde)",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Salade / Mâche",qty:"1 sachet",aisle:"Légumes & Fruits"},{name:"Huile d'olive",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Éplucher et couper la patate douce en forme de frites.","Mélanger avec l'huile, cuire au Air Fryer 20 min à 200°C.","Cuire les steaks à la poêle ou au Air Fryer les 5 dernières minutes.","Servir avec une belle portion de salade."], gamelleTip: "Les frites de patate douce au Airfryer sont le cheat-meal sain par excellence." },
-      { id: 17, title: "Dinde sautée, mélange de légumes & riz", prot: "poulet", equip: "plaques", prep: "5 min", cook: "15 min", ingredients: [{name:"Blanc de dinde",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Mélange légumes surgelés (wok/julienne)",qty:"600g",aisle:"Légumes & Fruits"},{name:"Riz",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Sauce soja",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Mettre le riz à cuire.","Saisir la dinde en lanières à la poêle.","Ajouter les légumes surgelés directement dans la poêle, couvrir 10 min.","Déglacer avec la sauce soja et mélanger au riz."], gamelleTip: "Les légumes surgelés bruts (sans sauce) sont parfaits et super pratiques pour les soirs de flemme." },
-      { id: 18, title: "Salade composée : Haricots, patates, œufs, tomates", prot: "vege", equip: "froid", prep: "15 min", cook: "15 min", ingredients: [{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Pommes de terre",qty:"400g",aisle:"Légumes & Fruits"},{name:"Œufs durs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"}], steps: ["Cuire les pommes de terre, les haricots verts et les œufs durs.","Laisser refroidir et couper en morceaux.","Mélanger avec les tomates en dés.","Assaisonner avec un filet d'huile d'olive et vinaigre."], gamelleTip: "Super plat végétarien complet. Les patates froides développent de l'amidon résistant (top pour la digestion)." },
-      { id: 19, title: "Crevettes, chou-fleur rôti & avocat", prot: "poisson", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Crevettes décortiquées",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"1 tête",aisle:"Légumes & Fruits"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper le chou-fleur en fleurettes, l'étaler sur une plaque et rôtir 25 min à 200°C au four.","Cuire le riz. Faire revenir les crevettes 3 min à la poêle.","Dans l'assiette, déposer le riz, le chou-fleur rôti, les crevettes et des lamelles d'avocat."], gamelleTip: "Rôtir le chou-fleur lui donne un goût de noisette qui change complètement de la vapeur." },
-      { id: 20, title: "Bagel complet, saumon fumé & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Bagels complets",qty:"4",aisle:"Épicerie & Féculents"},{name:"Saumon fumé",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"St Môret (ou fromage frais)",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Concombre & Mâche",qty:"1/2 concombre",aisle:"Légumes & Fruits"}], steps: ["Ouvrir les bagels en deux (les toaster légèrement si possible).","Tartiner de St Môret.","Disposer des rondelles de concombre, la mâche et le saumon fumé."], gamelleTip: "Un classique sain, rapide, avec de bons glucides grâce au pain complet." },
-      { id: 21, title: "Bowl Galette de riz, thon & avocat", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Galettes de riz",qty:"8",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Tomates & Salade",qty:"2 tomates, salade",aisle:"Légumes & Fruits"}], steps: ["Dans un grand bol, émietter grossièrement les galettes de riz.","Écraser l'avocat et le mélanger avec le thon (cela remplace la mayo !).","Ajouter les tomates en dés et la salade. Mélanger le tout."], gamelleTip: "C'est une astuce fitness très connue : l'avocat écrasé avec le thon crée une texture ultra-crémeuse." },
-      { id: 22, title: "Salade de pois chiches, poivrons & feta", prot: "vege", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Pois chiches (égouttés)",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Poivrons frais (rouge/jaune)",qty:"2",aisle:"Légumes & Fruits"},{name:"Tomates",qty:"3",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Couper les poivrons et les tomates en petits dés.","Mélanger avec les pois chiches rincés.","Émietter la feta sur le dessus.","Assaisonner huile d'olive, citron, sel, poivre."], gamelleTip: "Les pois chiches apportent protéines et glucides complexes. Très frais pour l'été." },
-      { id: 23, title: "Gnocchis au four, tomates cerises & poulet", prot: "poulet", equip: "four", prep: "5 min", cook: "20 min", ingredients: [{name:"Gnocchis",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Tomates cerises",qty:"500g",aisle:"Légumes & Fruits"},{name:"Blanc de poulet coupé en dés",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Dans un grand plat allant au four, mélanger les gnocchis crus, les tomates cerises et le poulet.","Arroser d'un filet d'huile d'olive et d'herbes.","Cuire 20 à 25 min à 200°C. Les tomates vont éclater et faire une sauce naturelle."], gamelleTip: "Les gnocchis cuits au four deviennent croustillants à l'extérieur et moelleux à l'intérieur. Zéro vaisselle." },
-      { id: 24, title: "Omelette tomate, chèvre & pain de seigle", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"},{name:"Chèvre (bûche)",qty:"80g",aisle:"Produits Frais & Crémerie"},{name:"Pain de seigle",qty:"4 tranches",aisle:"Épicerie & Féculents"}], steps: ["Couper les tomates en dés et les faire revenir 2 min à la poêle.","Verser les œufs battus par-dessus.","Ajouter des morceaux de chèvre avant que l'omelette ne fige.","Servir chaud avec le pain de seigle."], gamelleTip: "Le chèvre a un goût fort, il en faut très peu pour parfumer tout le plat." },
-      { id: 25, title: "Wrap au thon, épinards & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas",qty:"4",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Épinards frais (pousses)",qty:"1 poignée",aisle:"Légumes & Fruits"},{name:"St Môret",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Mélanger le thon égoutté avec le St Môret pour créer des rillettes allégées.","Étaler sur les wraps.","Ajouter les pousses d'épinards frais, rouler fermement."], gamelleTip: "Les rillettes de thon au fromage frais remplacent parfaitement la mayonnaise pour la ligne !" }
+      { id: 1, title: "Poulet rôti au pesto & patate douce", prot: "poulet", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Blanc de poulet",qty:"600g",aisle:"Boucherie / Poissonnerie"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"}], steps: ["Couper la patate douce en cubes et les tomates cerises en deux.","Mélanger avec un filet d'huile d'olive, sel, poivre et étaler sur la plaque du four.","Enrober les blancs de poulet de pesto et les poser sur les légumes.","Cuire au four 25 min à 200°C."], gamelleTip: "Le pesto apporte les bons lipides. La patate douce a un IG plus bas que la pomme de terre classique." },
+      { id: 2, title: "Steak haché, écrasé de chou-fleur & haricots", prot: "boeuf", equip: "plaques", prep: "15 min", cook: "15 min", ingredients: [{name:"Steak haché 5%",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"800g",aisle:"Légumes & Fruits"},{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Cottage cheese ou Skyr",qty:"2 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire le chou-fleur et les haricots verts à l'eau bouillante ou vapeur.","Écraser grossièrement le chou-fleur avec le cottage cheese, sel et poivre pour faire une purée.","Cuire les steaks à la poêle selon la cuisson désirée.","Dresser le steak avec l'écrasé et les haricots verts."], gamelleTip: "La purée de chou-fleur est très rassasiante et remplace parfaitement la pomme de terre pour un repas léger en glucides le soir." },
+      { id: 3, title: "Saumon grillé au Air Fryer, riz & courgettes", prot: "poisson", equip: "airfryer", prep: "5 min", cook: "12 min", ingredients: [{name:"Saumon (pavés)",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Courgettes",qty:"3",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Huile d'olive & Herbes",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire le riz à part.","Couper les courgettes en rondelles.","Placer les courgettes et le saumon dans le Air Fryer. Ajouter un tout petit filet d'huile et des herbes sur les courgettes.","Cuire 12 min à 190°C."], gamelleTip: "Le saumon est riche en bonnes graisses (Oméga 3). L'Air Fryer évite de rajouter du gras." },
+      { id: 4, title: "Wrap Dinde, Avocat & Cottage Cheese", prot: "poulet", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas",qty:"4",aisle:"Épicerie & Féculents"},{name:"Blanc de dinde",qty:"8 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Cottage cheese",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Mâche",qty:"1 poignée",aisle:"Légumes & Fruits"}], steps: ["Tartiner généreusement les wraps de cottage cheese.","Disposer les tranches de dinde, l'avocat en lamelles et la salade.","Rouler le wrap fermement et le couper en deux."], gamelleTip: "Idéal pour un déjeuner rapide. L'avocat (bons lipides) et le cottage cheese rendent le wrap moelleux." },
+      { id: 5, title: "Gnocchis poêlés, épinards & tomates", prot: "vege", equip: "plaques", prep: "5 min", cook: "10 min", ingredients: [{name:"Gnocchis",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Tomates cerises",qty:"250g",aisle:"Légumes & Fruits"},{name:"St Môret ou Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Faire dorer les gnocchis dans une poêle anti-adhésive.","Ajouter les tomates cerises coupées en deux et laisser fondre 3 min.","Ajouter les épinards frais, remuer jusqu'à ce qu'ils réduisent.","Ajouter le fromage hors du feu pour créer un liant crémeux."], gamelleTip: "Les épinards sont excellents pour le fer. Le fromage frais lie le tout sans avoir besoin de crème." },
+      { id: 6, title: "Salade de lentilles, thon, concombre & feta", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Lentilles (en boîte, égouttées)",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Concombre & Tomates",qty:"1 concombre, 2 tomates",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Rincer abondamment les lentilles à l'eau froide.","Couper le concombre, les tomates et la feta en petits dés.","Mélanger tous les ingrédients avec le thon émietté.","Assaisonner avec un filet d'huile d'olive et du jus de citron."], gamelleTip: "Un classique indémodable : très riche en protéines et en fibres végétales." },
+      { id: 7, title: "Crevettes sautées aux poivrons & semoule", prot: "poisson", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Crevettes décortiquées",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Poivrons",qty:"400g",aisle:"Légumes & Fruits"},{name:"Semoule complète",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Oignons blancs",qty:"2",aisle:"Légumes & Fruits"}], steps: ["Préparer la semoule en versant de l'eau bouillante dessus, couvrir 5 min.","Faire revenir l'oignon émincé et les poivrons en lamelles à la poêle.","Ajouter les crevettes et sauter 3 min jusqu'à ce qu'elles soient roses.","Servir les crevettes et légumes sur le lit de semoule."], gamelleTip: "Les crevettes sont quasiment de la protéine pure (très peu de graisses)." },
+      { id: 8, title: "Omelette champignons, épinards & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Champignons frais",qty:"300g",aisle:"Légumes & Fruits"},{name:"Épinards frais",qty:"200g",aisle:"Légumes & Fruits"},{name:"Pain complet",qty:"4 belles tranches",aisle:"Épicerie & Féculents"}], steps: ["Faire revenir les champignons émincés dans une poêle jusqu'à évaporation de leur eau.","Ajouter les épinards et laisser réduire 1 min.","Battre les œufs, saler, poivrer, et verser dans la poêle. Cuire à feu moyen.","Manger avec le pain toasté."], gamelleTip: "Les œufs entiers contiennent d'excellents lipides et vitamines." },
+      { id: 9, title: "Aubergines rôties au bœuf & coulis tomate", prot: "boeuf", equip: "four", prep: "15 min", cook: "40 min", ingredients: [{name:"Aubergines",qty:"2 grosses",aisle:"Légumes & Fruits"},{name:"Bœuf haché 5%",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Coulis de tomate",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Riz",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en deux, quadriller la chair et précuire 20 min au four à 200°C.","Creuser la chair avec une cuillère, la hacher et la mélanger avec le bœuf cru et le coulis.","Farcir les coques d'aubergine, remettre au four 20 min.","Servir avec un peu de riz."], gamelleTip: "Précuire l'aubergine au four évite qu'elle n'agisse comme une éponge à huile." },
+      { id: 10, title: "Galette sarrasin, jambon, œuf & champignons", prot: "porc", equip: "plaques", prep: "5 min", cook: "5 min", ingredients: [{name:"Galettes de sarrasin",qty:"4",aisle:"Épicerie & Féculents"},{name:"Jambon blanc",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"Œufs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Champignons",qty:"200g",aisle:"Légumes & Fruits"}], steps: ["Poêler rapidement les champignons.","Chauffer la galette dans une grande poêle.","Casser un œuf au centre, étaler légèrement le blanc.","Ajouter une tranche de jambon et les champignons.","Replier les bords et laisser cuire jusqu'à ce que le blanc soit pris."], gamelleTip: "La farine de sarrasin est excellente pour la santé (IG bas et sans gluten)." },
+      { id: 11, title: "Bowl Riz, Sardines, Avocat & Algues", prot: "poisson", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Sardines en boîte",qty:"2 boîtes",aisle:"Boucherie / Poissonnerie"},{name:"Riz cuit (froid)",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Avocat & Concombre",qty:"1 avocat, 1/2 concombre",aisle:"Légumes & Fruits"},{name:"Feuilles d'algues (Nori)",qty:"1 poignée",aisle:"Épicerie & Féculents"}], steps: ["Couper l'avocat et le concombre en dés.","Égoutter légèrement les sardines.","Dans une assiette creuse, disposer le riz, ajouter les sardines, l'avocat et le concombre.","Émietter les feuilles d'algues sur le dessus avec un filet de sauce soja."], gamelleTip: "Les sardines sont une mine d'Oméga 3 et de calcium. Repas ultra nourrissant." },
+      { id: 12, title: "Pois chiches rôtis, carottes & Skyr (Air Fryer)", prot: "vege", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Pois chiches",qty:"400g",aisle:"Épicerie & Féculents"},{name:"Carottes",qty:"6",aisle:"Légumes & Fruits"},{name:"Skyr nature",qty:"200g",aisle:"Produits Frais & Crémerie"},{name:"Paprika",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Rincer et sécher les pois chiches. Éplucher et couper les carottes en bâtonnets.","Mélanger avec 1 c.a.s d'huile d'olive et le paprika.","Cuire au Air Fryer 20 min à 190°C en secouant à mi-cuisson.","Servir avec le Skyr assaisonné (sel, poivre, herbes) en guise de sauce fraîche."], gamelleTip: "Des protéines végétales croquantes. Le Skyr fait une super sauce dip très dense en protéines." },
+      { id: 13, title: "Pâtes au saumon & brocolis, sauce Skyr", prot: "poisson", equip: "plaques", prep: "10 min", cook: "15 min", ingredients: [{name:"Saumon",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Pâtes (complètes)",qty:"250g",aisle:"Épicerie & Féculents"},{name:"Brocolis",qty:"400g",aisle:"Légumes & Fruits"},{name:"Skyr",qty:"3 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Cuire les pâtes et les fleurettes de brocolis dans la même casserole d'eau bouillante.","Égoutter. Si saumon frais : le cuire à la poêle. Si fumé : le couper en lamelles.","Mélanger les pâtes, les brocolis, le saumon et le Skyr hors du feu."], gamelleTip: "Le Skyr remplace la crème fraîche et rend le plat crémeux tout en ajoutant des protéines." },
+      { id: 14, title: "Poulet, aubergines au four & semoule", prot: "poulet", equip: "four", prep: "10 min", cook: "30 min", ingredients: [{name:"Blanc de poulet",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Aubergines",qty:"2",aisle:"Légumes & Fruits"},{name:"Semoule",qty:"240g",aisle:"Épicerie & Féculents"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Couper les aubergines en cubes et le poulet en gros morceaux.","Placer sur une plaque de four, ajouter les herbes et un filet d'huile d'olive.","Cuire 30 min à 200°C.","Préparer la semoule à l'eau bouillante et mélanger le tout (le jus des aubergines va l'hydrater)."], gamelleTip: "L'aubergine fond au four et lie parfaitement la semoule sans rajouter de sauce." },
+      { id: 15, title: "Salade de pâtes, poulet, tomates & pesto", prot: "poulet", equip: "froid", prep: "10 min", cook: "10 min", ingredients: [{name:"Pâtes",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Blanc de poulet cuit",qty:"300g",aisle:"Boucherie / Poissonnerie"},{name:"Tomates & Mâche",qty:"3 tomates, 1 poignée mâche",aisle:"Légumes & Fruits"},{name:"Pesto vert",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Cuire les pâtes et les refroidir sous l'eau froide.","Couper les tomates en dés et le poulet en lamelles.","Dans un grand saladier, mélanger les pâtes froides, le pesto, le poulet, les tomates et la mâche."], gamelleTip: "Le pesto est dense en calories (huile/pignons), 2 cuillères à soupe suffisent largement pour 4 portions." },
+      { id: 16, title: "Steak haché & frites de patate douce (Air Fryer)", prot: "boeuf", equip: "airfryer", prep: "10 min", cook: "20 min", ingredients: [{name:"Steak haché 5%",qty:"4",aisle:"Boucherie / Poissonnerie"},{name:"Patate douce",qty:"800g",aisle:"Légumes & Fruits"},{name:"Mâche ou Salade",qty:"1 sachet",aisle:"Légumes & Fruits"},{name:"Paprika",qty:"1 c.à.c",aisle:"Épicerie & Féculents"}], steps: ["Éplucher et couper la patate douce en forme de frites.","Mélanger avec très peu d'huile et le paprika. Cuire au Air Fryer 20 min à 200°C.","Cuire les steaks à la poêle à sec (ou au Air Fryer les 5 dernières minutes).","Servir avec une belle portion de salade verte."], gamelleTip: "Les frites de patate douce au Airfryer sont le cheat-meal sain par excellence." },
+      { id: 17, title: "Dinde sautée, légumes & riz", prot: "poulet", equip: "plaques", prep: "5 min", cook: "15 min", ingredients: [{name:"Blanc de dinde",qty:"500g",aisle:"Boucherie / Poissonnerie"},{name:"Mélange légumes",qty:"600g",aisle:"Légumes & Fruits"},{name:"Riz",qty:"200g",aisle:"Épicerie & Féculents"},{name:"Sauce soja",qty:"2 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Mettre le riz à cuire.","Saisir la dinde en lanières à la poêle.","Ajouter les légumes directement dans la poêle, couvrir 10 min.","Déglacer avec la sauce soja et mélanger au riz."], gamelleTip: "Les légumes bruts (sans sauce) apportent du volume, des fibres et des vitamines au repas." },
+      { id: 18, title: "Salade composée : Haricots, patates, œufs", prot: "vege", equip: "froid", prep: "15 min", cook: "15 min", ingredients: [{name:"Haricots verts",qty:"400g",aisle:"Légumes & Fruits"},{name:"Pommes de terre",qty:"400g",aisle:"Légumes & Fruits"},{name:"Œufs",qty:"4",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"}], steps: ["Cuire les pommes de terre, les haricots verts et les œufs durs.","Laisser refroidir et couper en morceaux.","Mélanger avec les tomates en dés.","Assaisonner avec un filet d'huile d'olive et vinaigre balsamique."], gamelleTip: "Les patates froides développent de l'amidon résistant (excellent pour le microbiote et la digestion)." },
+      { id: 19, title: "Crevettes, chou-fleur rôti & avocat", prot: "poisson", equip: "four", prep: "10 min", cook: "25 min", ingredients: [{name:"Crevettes décortiquées",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Chou-fleur",qty:"1 tête",aisle:"Légumes & Fruits"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Riz complet",qty:"150g",aisle:"Épicerie & Féculents"}], steps: ["Couper le chou-fleur en fleurettes, l'étaler sur une plaque et rôtir 25 min à 200°C au four.","Cuire le riz. Faire revenir les crevettes 3 min à la poêle.","Dans l'assiette, déposer le riz, le chou-fleur rôti, les crevettes et des lamelles d'avocat."], gamelleTip: "Rôtir le chou-fleur lui donne un goût toasté qui change complètement de la vapeur." },
+      { id: 20, title: "Bagel complet, saumon fumé & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Bagels complets",qty:"4",aisle:"Épicerie & Féculents"},{name:"Saumon fumé",qty:"4 tranches",aisle:"Boucherie / Poissonnerie"},{name:"St Môret",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"},{name:"Concombre & Mâche",qty:"1/2 concombre",aisle:"Légumes & Fruits"}], steps: ["Ouvrir les bagels en deux (les toaster légèrement si possible).","Tartiner de St Môret.","Disposer des rondelles de concombre, la mâche et le saumon fumé."], gamelleTip: "Un classique rapide avec de bons glucides grâce au pain complet." },
+      { id: 21, title: "Bowl Galettes de riz, thon & avocat", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Galettes de riz",qty:"8",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Avocat",qty:"1",aisle:"Légumes & Fruits"},{name:"Tomates & Salade",qty:"2 tomates, salade",aisle:"Légumes & Fruits"}], steps: ["Dans un grand bol, émietter grossièrement les galettes de riz.","Écraser l'avocat et le mélanger intimement avec le thon (cela remplace la mayonnaise).","Ajouter les tomates en dés et la salade. Mélanger le tout."], gamelleTip: "C'est une astuce fitness très connue : l'avocat écrasé avec le thon crée une texture onctueuse très saine." },
+      { id: 22, title: "Salade de pois chiches, poivrons & feta", prot: "vege", equip: "froid", prep: "10 min", cook: "0 min", ingredients: [{name:"Pois chiches",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Poivrons frais",qty:"2",aisle:"Légumes & Fruits"},{name:"Tomates",qty:"3",aisle:"Légumes & Fruits"},{name:"Feta",qty:"100g",aisle:"Produits Frais & Crémerie"}], steps: ["Couper les poivrons et les tomates en petits dés.","Mélanger avec les pois chiches rincés.","Émietter la feta sur le dessus.","Assaisonner d'huile d'olive, citron, sel, poivre."], gamelleTip: "Les pois chiches apportent protéines et glucides complexes. Très rassasiant." },
+      { id: 23, title: "Gnocchis au four, tomates cerises & poulet", prot: "poulet", equip: "four", prep: "5 min", cook: "20 min", ingredients: [{name:"Gnocchis",qty:"500g",aisle:"Épicerie & Féculents"},{name:"Tomates cerises",qty:"500g",aisle:"Légumes & Fruits"},{name:"Blanc de poulet",qty:"400g",aisle:"Boucherie / Poissonnerie"},{name:"Herbes de Provence",qty:"1 c.à.s",aisle:"Épicerie & Féculents"}], steps: ["Dans un grand plat allant au four, mélanger les gnocchis crus, les tomates cerises et le poulet cru en dés.","Arroser d'un filet d'huile d'olive et d'herbes. Bien mélanger.","Cuire 20 à 25 min à 200°C. Les tomates vont éclater et faire une sauce."], gamelleTip: "Les gnocchis cuits au four deviennent croustillants sans nécessiter beaucoup d'huile." },
+      { id: 24, title: "Omelette tomate, chèvre & pain complet", prot: "vege", equip: "plaques", prep: "10 min", cook: "10 min", ingredients: [{name:"Œufs",qty:"8",aisle:"Produits Frais & Crémerie"},{name:"Tomates",qty:"2",aisle:"Légumes & Fruits"},{name:"Chèvre (bûche)",qty:"80g",aisle:"Produits Frais & Crémerie"},{name:"Pain complet",qty:"4 tranches",aisle:"Épicerie & Féculents"}], steps: ["Couper les tomates en dés et les faire revenir 2 min à la poêle.","Verser les œufs battus par-dessus.","Ajouter des morceaux de chèvre avant que l'omelette ne fige.","Servir chaud avec le pain toasté."], gamelleTip: "Le chèvre a un goût fort, il en faut très peu pour parfumer toute l'omelette." },
+      { id: 25, title: "Wrap au thon, épinards & St Môret", prot: "poisson", equip: "froid", prep: "5 min", cook: "0 min", ingredients: [{name:"Wraps / Fajitas",qty:"4",aisle:"Épicerie & Féculents"},{name:"Thon au naturel",qty:"2 boîtes",aisle:"Épicerie & Féculents"},{name:"Épinards frais",qty:"1 poignée",aisle:"Légumes & Fruits"},{name:"St Môret",qty:"4 c.à.s",aisle:"Produits Frais & Crémerie"}], steps: ["Mélanger le thon égoutté avec le St Môret pour créer des rillettes allégées.","Étaler généreusement sur les wraps.","Ajouter les pousses d'épinards frais, rouler fermement et couper."], gamelleTip: "Les rillettes de thon au fromage frais remplacent parfaitement les mayonnaises industrielles !" }
     ];
 
     let recipesData = [...baseRecipesData];
@@ -478,20 +508,20 @@
     // --- UI HELPERS ---
     function getEquipBadge(equip) {
       switch(equip) {
-        case 'four': return '<span class="bg-red-100 text-red-800 text-[11px] font-bold px-2 py-0.5 rounded-md border border-red-200">🔥 Four</span>';
+        case 'four': return '<span class="bg-[#f4f0ea] text-brandAccent text-[11px] font-bold px-2 py-0.5 rounded-md border border-brandBorder shadow-sm">🔥 Four</span>';
         case 'airfryer': return '<span class="bg-amber-100 text-amber-800 text-[11px] font-bold px-2 py-0.5 rounded-md border border-amber-200">⚡ Air Fryer</span>';
-        case 'froid': return '<span class="bg-sky-100 text-sky-800 text-[11px] font-bold px-2 py-0.5 rounded-md border border-sky-200">❄️ Froid</span>';
-        default: return '<span class="bg-stone-100 text-stone-800 text-[11px] font-bold px-2 py-0.5 rounded-md border border-stone-300">🍳 Poêle/Plaques</span>';
+        case 'froid': return '<span class="bg-white text-stone-600 text-[11px] font-bold px-2 py-0.5 rounded-md border border-stone-200 shadow-sm">❄️ Froid</span>';
+        default: return '<span class="bg-[#fdfaf6] text-brandPrimary text-[11px] font-bold px-2 py-0.5 rounded-md border border-brandBorder shadow-sm">🍳 Plaques</span>';
       }
     }
 
     function getProtBadge(prot) {
       switch(prot) {
-        case 'poulet': return '<span class="bg-yellow-50 text-yellow-800 border border-yellow-200 text-[11px] font-bold px-2 py-0.5 rounded-md">🐔 Volaille</span>';
-        case 'boeuf': return '<span class="bg-red-50 text-red-800 border border-red-200 text-[11px] font-bold px-2 py-0.5 rounded-md">🥩 Bœuf/Veau</span>';
-        case 'porc': return '<span class="bg-pink-50 text-pink-800 border border-pink-200 text-[11px] font-bold px-2 py-0.5 rounded-md">🥓 Jambon/Bacon</span>';
-        case 'vege': return '<span class="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-bold px-2 py-0.5 rounded-md">🥚 Végé</span>';
-        default: return '<span class="bg-cyan-50 text-cyan-800 border border-cyan-200 text-[11px] font-bold px-2 py-0.5 rounded-md">🐟 Poisson</span>';
+        case 'poulet': return '<span class="bg-stone-50 text-stone-700 border border-stone-200 text-[11px] font-bold px-2 py-0.5 rounded-md shadow-sm">🐔 Volaille</span>';
+        case 'boeuf': return '<span class="bg-red-50 text-red-800 border border-red-200 text-[11px] font-bold px-2 py-0.5 rounded-md shadow-sm">🥩 Bœuf</span>';
+        case 'porc': return '<span class="bg-stone-50 text-stone-700 border border-stone-200 text-[11px] font-bold px-2 py-0.5 rounded-md shadow-sm">🥓 Bacon/Jambon</span>';
+        case 'vege': return '<span class="bg-emerald-50 text-emerald-800 border border-emerald-200 text-[11px] font-bold px-2 py-0.5 rounded-md shadow-sm">🥚 Végé</span>';
+        default: return '<span class="bg-cyan-50 text-cyan-800 border border-cyan-200 text-[11px] font-bold px-2 py-0.5 rounded-md shadow-sm">🐟 Poisson</span>';
       }
     }
 
@@ -523,7 +553,7 @@
               <div class="flex items-center gap-1.5 flex-wrap">${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}</div>
               <div class="flex items-center gap-2">
                 <button onclick="toggleFavorite(${recipe.id}); event.stopPropagation();" class="text-lg hover:scale-110 transition">${isFav ? '❤️' : '🤍'}</button>
-                <span class="text-xs text-stone-400 font-bold">#${recipe.id}</span>
+                <span class="text-xs text-stone-300 font-bold">#${recipe.id}</span>
               </div>
             </div>
             <h3 onclick="openModal(${recipe.id})" class="font-bold text-base text-brandDark group-hover:text-brandAccent cursor-pointer line-clamp-1">${recipe.title}</h3>
@@ -531,7 +561,7 @@
           </div>
           <div class="pt-3 border-t border-stone-100 flex items-center justify-between text-xs">
             <button onclick="openModal(${recipe.id})" class="text-stone-600 font-semibold hover:text-brandAccent">📖 Voir recette</button>
-            <button onclick="toggleSelectRecipe(${recipe.id})" class="${isSelected ? 'bg-orange-100 text-brandAccent border border-orange-200' : 'bg-brandPrimary hover:bg-brandPrimaryHover text-white'} font-bold px-3 py-1.5 rounded-xl transition shadow-sm">${isSelected ? '✔️ Au menu' : '+ Au menu'}</button>
+            <button onclick="toggleSelectRecipe(${recipe.id})" class="${isSelected ? 'bg-brandCardMuted text-brandAccent border border-brandAccent' : 'bg-brandPrimary hover:bg-brandPrimaryHover text-white'} font-bold px-3 py-1.5 rounded-xl transition shadow-sm">${isSelected ? '✔️ Au menu' : '+ Au menu'}</button>
           </div>
         `;
         grid.appendChild(card);
@@ -555,7 +585,7 @@
     window.setProteinFilter = (prot) => {
       currentProtFilter = prot;
       document.querySelectorAll('.prot-filter').forEach(btn => {
-        btn.className = (btn.textContent.toLowerCase().includes(prot) || (prot === 'all' && btn.textContent.includes('Toutes')) || (prot === 'vege' && btn.textContent.includes('Végé'))) ? "prot-filter active-filter bg-brandPrimary text-white px-3 py-1.5 rounded-lg border border-brandPrimary font-medium shadow-sm" : "prot-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3 py-1.5 rounded-lg transition";
+        btn.className = (btn.textContent.toLowerCase().includes(prot) || (prot === 'all' && btn.textContent.includes('Toutes')) || (prot === 'vege' && btn.textContent.includes('Végé'))) ? "prot-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "prot-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
       });
       renderRecipes();
     }
@@ -568,7 +598,7 @@
                          (equip === 'airfryer' && btn.textContent.includes('Air Fryer')) ||
                          (equip === 'froid' && btn.textContent.includes('Froid')) ||
                          (equip === 'plaques' && btn.textContent.includes('Plaques'));
-        btn.className = isActive ? "equip-filter active-filter bg-brandPrimary text-white px-3 py-1.5 rounded-lg border border-brandPrimary font-medium shadow-sm" : "equip-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3 py-1.5 rounded-lg transition";
+        btn.className = isActive ? "equip-filter active-filter px-3.5 py-1.5 rounded-md border border-brandPrimary bg-brandPrimary text-white font-medium shadow-sm transition" : "equip-filter border border-stone-200 bg-stone-50 text-stone-700 hover:bg-stone-100 px-3.5 py-1.5 rounded-md transition";
       });
       renderRecipes();
     }
@@ -591,18 +621,18 @@
       const count = selectedRecipeIds.length;
       document.getElementById('planCountBig').innerText = count; 
       document.getElementById('planPortionsBig').innerText = count * 4;
-      document.getElementById('headerMenuCount').innerText = `${count} plat${count > 1 ? 's' : ''}`; 
+      document.getElementById('headerMenuCount').innerText = count; 
       document.getElementById('planningTabBadge').innerText = count;
 
       if (count === 0) {
-        container.innerHTML = `<div class="py-12 text-center text-stone-500 space-y-3"><p class="text-4xl">🍽️</p><p class="font-bold text-brandDark">Votre planning est vide.</p></div>`;
+        container.innerHTML = `<div class="py-12 text-center text-stone-400 space-y-3"><p class="text-4xl">🍽️</p><p class="font-medium text-stone-500">Votre sélection est vide.</p></div>`;
         return;
       }
       selectedRecipeIds.forEach((id, index) => {
         const recipe = recipesData.find(r => r.id === id); if (!recipe) return;
         const row = document.createElement('div'); 
-        row.className = "flex flex-col sm:flex-row sm:items-center justify-between bg-[#fdfaf6] p-4 rounded-xl border border-brandBorder gap-3 hover:border-brandAccent transition";
-        row.innerHTML = `<div class="flex items-center space-x-3"><span class="bg-brandAccent text-white font-bold text-xs w-7 h-7 rounded-full flex items-center justify-center shadow-sm">J${index + 1}</span><div><div class="flex gap-2 mb-0.5">${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}</div><h4 class="font-bold text-sm cursor-pointer hover:text-brandAccent" onclick="openModal(${recipe.id})">${recipe.title}</h4></div></div><div class="flex gap-2"><button onclick="openModal(${recipe.id})" class="bg-white border border-stone-200 px-3 py-1.5 rounded-lg text-xs hover:bg-stone-50">📖</button><button onclick="toggleSelectRecipe(${recipe.id})" class="bg-red-50 text-red-600 border border-red-100 font-bold px-2.5 py-1.5 rounded-lg text-xs hover:bg-red-100">✕ Retirer</button></div>`;
+        row.className = "flex flex-col sm:flex-row sm:items-center justify-between bg-[#fdfaf6] p-4 rounded-xl border border-brandBorder gap-4 hover:border-brandAccent transition";
+        row.innerHTML = `<div class="flex items-center space-x-4"><span class="bg-brandPrimary text-white font-bold text-xs w-8 h-8 rounded-lg flex items-center justify-center shadow-sm">J${index + 1}</span><div><div class="flex gap-2 mb-1">${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}</div><h4 class="font-bold text-sm text-brandPrimary cursor-pointer hover:text-brandAccent transition" onclick="openModal(${recipe.id})">${recipe.title}</h4></div></div><div class="flex gap-2"><button onclick="openModal(${recipe.id})" class="bg-white border border-stone-200 text-stone-600 px-3 py-2 rounded-lg text-xs font-medium hover:bg-stone-50 transition shadow-sm">Voir</button><button onclick="toggleSelectRecipe(${recipe.id})" class="bg-white text-stone-500 border border-stone-200 font-medium px-3 py-2 rounded-lg text-xs hover:bg-red-50 hover:text-red-500 hover:border-red-200 transition shadow-sm">Retirer</button></div>`;
         container.appendChild(row);
       });
     }
@@ -616,11 +646,11 @@
 
       Object.keys(aisles).forEach(aisleName => {
         if (aisles[aisleName].length === 0) return;
-        const card = document.createElement('div'); card.className = "bg-white p-4 rounded-2xl border border-brandBorder shadow-sm print:break-inside-avoid";
-        let html = `<h3 class="font-bold text-sm text-brandDark border-b border-brandBorder pb-2 flex items-center justify-between"><span>${aisleName}</span><span class="text-xs bg-[#fdfaf6] text-brandAccent font-bold px-2 py-0.5 rounded-full border border-brandBorder">${aisles[aisleName].length} art.</span></h3><ul class="space-y-2 text-xs mt-3">`;
+        const card = document.createElement('div'); card.className = "bg-white p-5 rounded-2xl border border-brandBorder shadow-sm print:break-inside-avoid";
+        let html = `<h3 class="font-bold text-sm text-brandPrimary border-b border-stone-100 pb-3 mb-3 flex items-center justify-between"><span>${aisleName}</span><span class="text-xs bg-brandCardMuted text-brandAccent font-bold px-2.5 py-1 rounded-md border border-brandBorder">${aisles[aisleName].length} art.</span></h3><ul class="space-y-2.5 text-sm">`;
         aisles[aisleName].forEach(item => {
           totalItems++; const key = `${aisleName}_${item.name}`.replace(/\s+/g, '_'); const isChecked = !!shoppingCheckedState[key]; if(isChecked) totalChecked++;
-          html += `<li class="flex items-start justify-between gap-2 p-1.5 rounded-lg ${isChecked ? 'bg-emerald-50/60 line-through text-stone-400' : 'hover:bg-stone-50'}"><label class="flex flex-1 cursor-pointer"><input type="checkbox" onchange="toggleShoppingCheck('${key}')" ${isChecked ? 'checked' : ''} class="mt-0.5 mr-2 h-4 w-4 rounded accent-brandAccent"><div class="font-semibold">${item.name} <span class="text-stone-500 font-normal">(${item.qty})</span></div></label>${item.isCustom ? `<button onclick="removeCustomItem(${item.customIdx})" class="text-red-400 hover:text-red-600">✕</button>` : ''}</li>`;
+          html += `<li class="flex items-start justify-between gap-3 p-2 rounded-lg transition ${isChecked ? 'bg-stone-50 line-through text-stone-400' : 'hover:bg-[#fdfaf6]'}"><label class="flex flex-1 cursor-pointer items-start"><input type="checkbox" onchange="toggleShoppingCheck('${key}')" ${isChecked ? 'checked' : ''} class="mt-1 mr-3 h-4 w-4 rounded text-brandAccent focus:ring-brandAccent"><div class="font-medium leading-tight">${item.name} <span class="text-stone-400 font-normal text-xs block mt-0.5">${item.qty}</span></div></label>${item.isCustom ? `<button onclick="removeCustomItem(${item.customIdx})" class="text-stone-300 hover:text-red-500 transition">✕</button>` : ''}</li>`;
         });
         html += `</ul>`; card.innerHTML = html; container.appendChild(card);
       });
@@ -640,17 +670,17 @@
       document.getElementById('modalCookTime').innerText = recipe.cook;
       document.getElementById('modalBadges').innerHTML = `${getProtBadge(recipe.prot)} ${getEquipBadge(recipe.equip)}`;
       
-      let equipText = 'Poêle/Plaques';
+      let equipText = 'Poêle / Plaques';
       if(recipe.equip === 'four') equipText = 'Four Traditionnel';
       else if(recipe.equip === 'airfryer') equipText = 'Air Fryer';
       else if(recipe.equip === 'froid') equipText = 'Sans cuisson / Froid';
       document.getElementById('modalEquipText').innerText = equipText;
       
       const ingUl = document.getElementById('modalIngredientsList'); ingUl.innerHTML = '';
-      recipe.ingredients.forEach(i => { ingUl.innerHTML += `<li class="bg-white p-2 rounded-xl border border-brandBorder text-xs shadow-sm">🔹 <strong>${i.name}</strong> (${i.qty})</li>`; });
+      recipe.ingredients.forEach(i => { ingUl.innerHTML += `<li class="bg-[#fdfaf6] p-2.5 rounded-xl border border-brandBorder text-xs shadow-sm flex items-center gap-2"><span class="text-brandAccent opacity-70">▪</span> <span><strong>${i.name}</strong> (${i.qty})</span></li>`; });
       
       const stepOl = document.getElementById('modalStepsList'); stepOl.innerHTML = '';
-      recipe.steps.forEach(s => { stepOl.innerHTML += `<li>${s}</li>`; });
+      recipe.steps.forEach(s => { stepOl.innerHTML += `<li class="pl-1">${s}</li>`; });
       
       document.getElementById('modalGamelleTip').innerText = recipe.gamelleTip; 
       
@@ -662,8 +692,8 @@
 
     function updateModalBtnState() {
       const btn = document.getElementById('modalActionBtn'); const isSelected = selectedRecipeIds.includes(currentModalRecipeId);
-      btn.innerText = isSelected ? "✓ Au menu (Retirer)" : "+ Au menu";
-      btn.className = isSelected ? "bg-orange-100 text-brandAccent border border-orange-200 font-bold px-5 py-2.5 rounded-xl shadow-sm" : "bg-brandPrimary hover:bg-brandPrimaryHover text-white font-bold px-5 py-2.5 rounded-xl shadow-sm transition";
+      btn.innerText = isSelected ? "✓ Retirer du menu" : "+ Ajouter au menu";
+      btn.className = isSelected ? "bg-brandCardMuted text-brandAccent border border-brandAccent font-bold px-6 py-2.5 rounded-lg shadow-sm transition" : "bg-brandPrimary hover:bg-brandPrimaryHover text-white font-bold px-6 py-2.5 rounded-lg shadow-md transition";
       btn.onclick = () => { toggleSelectRecipe(currentModalRecipeId); updateModalBtnState(); };
     }
     window.closeModal = () => document.getElementById('recipeModal').classList.add('hidden');
@@ -676,7 +706,7 @@
       if (recipeIdToEdit !== null) {
         const r = recipesData.find(x => x.id === recipeIdToEdit);
         document.getElementById('addRecipeModalTitle').innerText = "Modifier la recette";
-        document.getElementById('addRecipeModalBtn').innerText = "Mettre à jour la recette";
+        document.getElementById('addRecipeModalBtn').innerText = "Mettre à jour";
         
         document.getElementById('newRecTitle').value = r.title;
         document.getElementById('newRecProt').value = r.prot;
@@ -688,8 +718,8 @@
         
         r.ingredients.forEach(i => addIngredientRow(i.name, i.qty, i.aisle));
       } else {
-        document.getElementById('addRecipeModalTitle').innerText = "Ajouter une nouvelle recette";
-        document.getElementById('addRecipeModalBtn').innerText = "Enregistrer la recette";
+        document.getElementById('addRecipeModalTitle').innerText = "Nouvelle recette";
+        document.getElementById('addRecipeModalBtn').innerText = "Enregistrer";
         
         document.getElementById('newRecTitle').value = '';
         document.getElementById('newRecProt').value = 'poulet';
@@ -711,18 +741,18 @@
     window.addIngredientRow = (name = '', qty = '', aisle = 'Épicerie & Féculents') => {
       const container = document.getElementById('dynamicIngredientsContainer');
       const row = document.createElement('div');
-      row.className = "flex gap-2 items-center bg-white p-2 rounded-xl border border-brandBorder shadow-sm";
+      row.className = "flex gap-2 items-center bg-white p-2 rounded-lg border border-stone-200 shadow-sm";
       row.innerHTML = `
         <input type="text" placeholder="Nom (ex: Riz)" value="${name}" class="ing-name flex-[2] bg-transparent text-sm focus:outline-none min-w-0">
-        <input type="text" placeholder="Qté (ex: 200g)" value="${qty}" class="ing-qty flex-[1] bg-transparent text-sm focus:outline-none min-w-0 border-l border-brandBorder pl-2">
-        <select class="ing-aisle flex-[2] bg-[#fdfaf6] rounded-lg px-2 text-xs py-1.5 outline-none text-stone-600 min-w-0 truncate border-l border-brandBorder">
+        <input type="text" placeholder="Qté (ex: 200g)" value="${qty}" class="ing-qty flex-[1] bg-transparent text-sm focus:outline-none min-w-0 border-l border-stone-200 pl-2">
+        <select class="ing-aisle flex-[2] bg-[#fdfaf6] rounded-md px-2 text-xs py-1.5 outline-none text-stone-600 min-w-0 truncate border-l border-stone-200">
           <option value="Boucherie / Poissonnerie" ${aisle.includes('Boucherie') ? 'selected' : ''}>🥩 Bouch/Poiss</option>
           <option value="Légumes & Fruits" ${aisle.includes('Légumes') ? 'selected' : ''}>🥦 Lég/Fruits</option>
           <option value="Épicerie & Féculents" ${aisle.includes('Épicerie') ? 'selected' : ''}>🌾 Épicerie</option>
           <option value="Produits Frais & Crémerie" ${aisle.includes('Frais') ? 'selected' : ''}>🧀 Frais/Crème</option>
           <option value="Divers / Hors Cuisine" ${aisle.includes('Divers') ? 'selected' : ''}>🛍️ Divers</option>
         </select>
-        <button type="button" onclick="this.parentElement.remove()" class="text-red-400 hover:text-red-600 font-bold px-2">✕</button>
+        <button type="button" onclick="this.parentElement.remove()" class="text-stone-300 hover:text-red-500 font-bold px-2 transition">✕</button>
       `;
       container.appendChild(row);
     };
@@ -779,9 +809,9 @@
     }
 
     window.switchTab = (tabId) => {
-      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('text-brandPrimary','border-brandPrimary','font-semibold'));
-      document.querySelectorAll('.nav-tab').forEach(t => t.classList.add('text-stone-500','border-transparent'));
-      const activeTab = document.getElementById(`tab-${tabId}`); activeTab.classList.remove('text-stone-500','border-transparent'); activeTab.classList.add('text-brandPrimary','border-brandPrimary','font-semibold');
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.remove('text-brandPrimary','border-brandPrimary','font-bold'));
+      document.querySelectorAll('.nav-tab').forEach(t => t.classList.add('text-stone-400','border-transparent'));
+      const activeTab = document.getElementById(`tab-${tabId}`); activeTab.classList.remove('text-stone-400','border-transparent'); activeTab.classList.add('text-brandPrimary','border-brandPrimary','font-bold');
       ['recipes','planning','shopping','dashboard'].forEach(id => document.getElementById(`sec-${id}`).classList.add('hidden'));
       document.getElementById(`sec-${tabId}`).classList.remove('hidden');
     }
