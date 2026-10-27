@@ -26,10 +26,13 @@
   </script>
   <style>
     /* Motif fond inspiré du motif léopard classique[cite: 2], rendu discret */
-    body {
-      background-color: #f6efe8;
-      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120' viewBox='0 0 120 120'%3E%3Cg opacity='0.08'%3E%3Cpath fill='%232a1f1a' d='M15 15c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM85 35c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM50 85c-6 3-8 10-3 15 4 4 10 3 13-1 4-4 2-10-3-12-2-1-5-2-7-2zm2 5c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z'/%3E%3Cpath fill='%239e6a4b' d='M17 20c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM87 40c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4zM52 90c2 0 4 2 4 4s-2 4-4 4-4-2-4-4 2-4 4-4z'/%3E%3Cpath fill='%232a1f1a' d='M40 25c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0zM100 80c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0zM20 70c-2 2-2 5 0 7 2 2 5 2 7 0 2-2 2-5 0-7-2-2-5-2-7 0z'/%3E%3C/g%3E%3C/svg%3E");
-    }
+   body {
+  background-color: #f6efe8;
+  /* L'astuce du linear-gradient permet de blanchir l'image à 85% pour qu'elle soit très discrète et que le texte reste lisible */
+  background-image: linear-gradient(rgba(246, 239, 232, 0.85), rgba(246, 239, 232, 0.85)), url("image_d5b9f7.jpg");
+  background-size: 400px; /* Vous pouvez modifier ce chiffre pour rendre les taches plus ou moins grosses */
+  background-repeat: repeat;
+}
     ::-webkit-scrollbar { width: 6px; height: 6px; }
     ::-webkit-scrollbar-track { background: transparent; }
     ::-webkit-scrollbar-thumb { background: #a88157; border-radius: 9999px; }
